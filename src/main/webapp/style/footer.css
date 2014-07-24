@@ -1,4 +1,7 @@
-#footer-wrap {
+#footer-wrap{
+    background: #eee;
+}
+#footer-above {
 background: url(../images/footer/footer-bg.png) repeat-x center top;
 margin: 0;
 position: relative;

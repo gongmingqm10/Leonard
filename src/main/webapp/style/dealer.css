@@ -1,0 +1,107 @@
+body {
+background: #000000 url("../images/dealer/body.gif") center top repeat-y;
+font-size: 12px;
+color: #464646;
+}
+.pageBox{
+    background: url(../images/dealer/dealer-bg.jpg) center top no-repeat;
+    zoom: 1;
+}
+.lv_treeBox{
+    padding-top: 250px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.lv_tree {
+    background: url(../images/dealer/treeBg.png) right bottom no-repeat;
+    height: 49px;
+    overflow: hidden;
+}
+
+.lv_tree .columnTitle {
+    float: left;
+    position: relative;
+    background: url(../images/dealer/columnTitle.png) left top no-repeat;
+    width: 190px;
+    height: 49px;
+    line-height: 49px;
+    font-size: 30px;
+    color: #fff;
+    text-indent: 20px;
+    font-family: \5FAE\8F6F\96C5\9ED1;
+    font-weight: normal;
+}
+
+.lv_tree_con {
+    background: none;
+    color: #565656;
+    float: right;
+    overflow: hidden;
+    padding: 29px 20px 0 0px;
+    text-align: right;
+}
+
+.lv_tree_con a {
+    color: #565656;
+}
+
+.lv_tree_con span {
+    color: #333333;
+}
+
+.pageContent {
+    margin: 0px auto;
+    background: #fff;
+    padding: 20px 0px 40px;
+    min-height: 400px;
+    _height: 400px;
+}
+
+.pageLeft{
+    width:20%;
+}
+
+.pageName {
+    font-size: 30px;
+    font-family: \5FAE\8F6F\96C5\9ED1;
+    height: 60px;
+    line-height: 60px;
+    padding-bottom: 10px;
+}
+
+.mapBox {
+    background: url(../images/dealer/map.jpg) left top no-repeat;
+    height: 480px;
+    position: relative;
+    z-index: 0;
+    font-size: 19px;
+}
+
+.mapBox li button.point {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: \5FAE\8F6F\96C5\9ED1;
+    width: 53px;
+    height: 28px;
+    line-height: 14px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    background: url(../images/dealer/city.png) left top no-repeat;
+    display: block;
+    z-index: 1;
+}
+
+.mapBox li button.point.p02{top: 95px;left: 535px;}
+.mapBox li button.point.p03{top: 145px;left: 450px;}
+.mapBox li button.point.p04{top: 170px;left: 445px;}
+.mapBox li button.point.p05{top: 230px;left: 370px;}
+.mapBox li button.point.p06{top: 250px;left: 523px;}
+.mapBox li button.point.p07{top: 275px;left: 310px;}
+.mapBox li button.point.p08{top: 350px;left: 300px;}
+.mapBox li button.point.p09{top: 350px;left: 435px;}
+.mapBox li button.point.p10{top: 130px;left: 150px;}
+.mapBox li button.point.p11{top: 140px;left:512px;}
+.mapBox li button.point.p12{top: 418px;left:396px;}
