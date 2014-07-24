@@ -1,0 +1,9 @@
+.top-view {
+    margin: 150px auto 0;
+}
+
+.video-js {
+    margin: 0 auto;
+    width: 800px !important;
+    height: 400px !important;
+}

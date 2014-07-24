@@ -29,6 +29,8 @@ body {
 
 .container {
     width: 960px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .header-nav {
