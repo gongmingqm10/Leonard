@@ -8,6 +8,16 @@
   http://www.springframework.org/schema/context    http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
     <context:component-scan base-package="com.xg.arctic" />
+
+	<mvc:resources mapping="/scripts/**" location="/scripts/" />
+	<mvc:resources mapping="/bootstrap/js/**" location="/bootstrap/js/" />
+	<mvc:resources mapping="/bootstrap/css/**" location="/bootstrap/css/" />
+	<mvc:resources mapping="/bootstrap/fonts/**" location="/bootstrap/fonts/" />
+	<mvc:resources mapping="/scripts/**" location="/scripts/" />
+	<mvc:resources mapping="/fonts/**" location="/fonts/" />
+	<mvc:resources mapping="/style/**" location="/style/" />
+	<mvc:resources mapping="/images/**" location="/images/" />
+
     <mvc:annotation-driven />
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/view/"/>

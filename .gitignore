@@ -14,6 +14,7 @@ hs_err_pid*
 .idea
 arcticweb.iml
 build
+.idea/gradle.xml
 
 #gradle
 .gradle

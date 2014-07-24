@@ -1,0 +1,38 @@
+.item > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 auto;
+}
+.social-border{
+    border: 1px solid #888;
+    border-radius:3px;
+    margin:2.5%;
+    height:300px;
+    width:28%;
+    padding-left:0px;
+    padding-right:0px;
+}
+.social-border > img{
+    width:100%;
+    height:100%;
+}
+#content, .content.wide {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    background:#eee;
+}
+hr {
+    display: block;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+#panel-find{
+    margin-top:20px;
+}
