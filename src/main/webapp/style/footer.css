@@ -1,21 +1,23 @@
 #footer-wrap{
     background: #eee;
+    width: 100%;
+    margin-top: 120px;
 }
 #footer-above {
-background: url(../images/footer/footer-bg.png) repeat-x center top;
-margin: 0;
-position: relative;
-height: 281px;
-width: 100%;
+    background: url(../images/footer/footer-bg.png) repeat-x center top;
+    margin: 0;
+    position: relative;
+    height: 281px;
+    width: 100%;
 }
 
 #footer-content {
-display: block;
-height: 281px;
-margin: 0 auto;
-overflow: hidden;
-padding: 0;
-width: 980px;
+    display: block;
+    height: 281px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    width: 980px;
 }
 
 .footer-logo {
@@ -25,66 +27,66 @@ text-align: center;
 }
 
 .social-links {
-padding: 0;
-position: relative;
-left: -3px;
-top: -14px;
-margin: 0 auto;
-width: 132px;
+    padding: 0;
+    position: relative;
+    left: -3px;
+    top: -14px;
+    margin: 0 auto;
+    width: 132px;
 }
 
 .social-links a {
-margin-right: 2px;
+    margin-right: 2px;
 }
 
 .copyright {
-position: relative;
-left: -3px;
-top: -4px;
-margin: 0;
+    position: relative;
+    left: -3px;
+    top: -4px;
+    margin: 0;
 }
 
 .copyright p {
-font-size: 10px;
+    font-size: 10px;
 }
 .blueish {
-color: #ccd3d9;
+    color: #ccd3d9;
 }
 .din {
-font-family: "DIN";
+    font-family: "DIN";
 }
 
 ul.footer-list li.header {
-font-size: 1.3em;
-padding-bottom: 15px;
+    font-size: 1.3em;
+    padding-bottom: 15px;
 }
 ul.footer-list li, ul.footer-list li a {
-color: #ccd3d9;
-font-family: "DINCond";
-font-size: 0.8em;
-line-height: 1.25;
-padding: 2px 20px;
-text-transform: uppercase;
+    color: #ccd3d9;
+    font-family: "DINCond";
+    font-size: 0.8em;
+    line-height: 1.25;
+    padding: 2px 20px;
+    text-transform: uppercase;
 }
 ul.footer-list li a {
-padding: 0;
-font-size: inherit;
+    padding: 0;
+    font-size: inherit;
 }
 
 .footer-section {
-float: left;
-padding: 0;
-margin-top: 7px;
-height: 274px;
-width: 160px;
-border: 1px solid #222;
+    float: left;
+    padding: 0;
+    margin-top: 7px;
+    height: 274px;
+    width: 160px;
+    border: 1px solid #222;
 }
 .footer-section img {
-margin-top: 30px;
+    margin-top: 30px;
 }
 
 .fs-left {
-border-left: 0;
+    border-left: 0;
 
 }
 
@@ -93,9 +95,9 @@ border-right: 0;
 }
 
 ul.footer-list {
-list-style: none;
-margin: 0;
-padding: 30px 0 0;
+    list-style: none;
+    margin: 0;
+    padding: 30px 0 0;
 }
 .footer-p{
     margin:0px;

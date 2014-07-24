@@ -22,7 +22,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </head>
 <body>
 <div class="container">
-<div class="container header-container">
+<div class="header-container">
     <div class="head-btn">
         <img src="http://intl.arcticcat.com/img/language/intl.png" alt="">&nbsp;
         <a href="#">English</a>
@@ -351,11 +351,4 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
     </div>
 </div>
-
 </div>
-
-<!--[if lt IE 9]>
-<div class="alert alert-warning">
-    You are using a Legacy Browser - it is not supported. Please upgrade to <a href="http://windows.microsoft.com/en-US/internet-explorer/downloads/ie-9/worldwide-languages">IE9</a>, Firefox, Safari, Chrome or Opera.
-</div>
-<![endif]-->
