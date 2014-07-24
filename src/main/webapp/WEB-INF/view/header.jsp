@@ -4,11 +4,12 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<!DOCTYPE html>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
 <head>
     <base href="<%=basePath%>">
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>${pageTitle}</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css" type="text/css"/>
