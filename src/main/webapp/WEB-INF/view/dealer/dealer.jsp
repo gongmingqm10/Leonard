@@ -116,6 +116,55 @@
                 </li>
                 </ul>
             </div>
+            <div class="search-bar">
+                 <form class="navbar-form navbar-left" role="search">
+                   <select class="form-control">
+                        <option>请选择一个省份</option>
+                        <option>北京</option>
+                        <option>上海</option>
+                        <option>河北</option>
+                        <option>吉林</option>
+                        <option>四川</option>
+                        <option>云南</option>
+                        <option>辽宁</option>
+                        <option>陕西</option>
+                        <option>广东</option>
+                        <option>新疆</option>
+                        <option>海南</option>
+                   </select>
+                   &nbsp;&nbsp;&nbsp;&nbsp;
+                   <button type="submit" class="btn btn-default">&nbsp;查询&nbsp</button>
+                 </form>
+            </div>
+            <div id="dealer-table">
+                <table class="table table-bordered">
+                   <thead >
+                      <tr>
+                         <th class="text-center">分销商名称</th>
+                         <th class="text-center">类型</th>
+                         <th class="text-center">销售人员</th>
+                         <th class="text-center">销售热线</th>
+                         <th class="text-center">地址</th>
+                      </tr>
+                   </thead>
+                   <tbody>
+                      <tr>
+                         <td class="col-md-3">北京北汽摩有限公司</td>
+                         <td class="col-md-1.7">专营经销商</td>
+                         <td class="col-md-1.3">吴国权</td>
+                         <td class="col-md-1.5">13901395737</td>
+                         <td class="col-md-4.5">北京朝阳区金蝉西路甲一号酷车小镇D1-1</td>
+                      </tr>
+                      <tr>
+                         <td>北京北汽摩有限公司</td>
+                          <td>专营经销商</td>
+                          <td>吴国权</td>
+                          <td>13901395737</td>
+                          <td>北京朝阳区金蝉西路甲一号酷车小镇D1-1</td>
+                      </tr>
+                   </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
