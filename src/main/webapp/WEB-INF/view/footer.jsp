@@ -106,8 +106,9 @@
     </div>
     </div>
 <br>
-<p class="text-center">
+<p class="text-center footer-p">
     隐私条款&nbsp;&nbsp;&nbsp;&nbsp;京ICP备09045555&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;法律声明 2013 北极动力&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Powered By 网站建设中心
 </p>
+<br>
 </body>
 </html>
