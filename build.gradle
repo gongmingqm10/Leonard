@@ -2,26 +2,30 @@ apply plugin: 'idea'
 apply plugin: 'war'
 apply plugin: 'jetty'
 
+
 tasks.withType(Compile) {
     options.encoding = "UTF-8"
 }
-
 repositories {
     mavenCentral()
 }
 
 dependencies {
     providedCompile 'javax.servlet:servlet-api:2.5'
+
     def springFrameworkVersion = '3.2.2.RELEASE'
 
     compile "org.springframework:spring-web:${springFrameworkVersion}",
             "org.springframework:spring-webmvc:${springFrameworkVersion}",
             "org.springframework:spring-beans:${springFrameworkVersion}",
             "org.springframework:spring-context:${springFrameworkVersion}"
+            "org.springframework:spring-jdbc:${springFrameworkVersion}"
+
+
 
     compile "aopalliance:aopalliance:1.0"
     compile "org.codehaus.jackson:jackson-mapper-asl:1.9.+"
-    compile 'org.mybatis:mybatis:3.0.1'
+    compile "org.mybatis:mybatis:3.2.3"
     compile 'org.apache.commons:commons-lang3:3.1'
 
 
