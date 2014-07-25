@@ -36,4 +36,17 @@ public class UserServiceImpl implements UserService{
         return users;
     }
 
+    @Override
+    public List<User> findUserByName(String userName) {
+        List<User> users = new ArrayList<User>();
+        SqlSession session = factory.openSession();
+        try{
+            UserMapper userMapper = session.getMapper(UserMapper.class);
+            users = userMapper.findUserByName(userName);
+        } finally {
+            session.close();
+        }
+        return users;
+    }
+
 }

@@ -12,4 +12,6 @@ import java.util.List;
  */
 public interface DealerService {
     List<Dealer> findAllDealer();
+
+    List<Dealer> findDealerByProvince(String province);
 }

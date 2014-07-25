@@ -7,8 +7,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -30,6 +32,14 @@ public class DealerController {
     @RequestMapping("/")
     public ModelAndView loadDealerPage(ModelMap map) {
         List<Dealer> dealers = dealerService.findAllDealer();
+        map.put("dealers", dealers);
+        return new ModelAndView("dealer/dealer", map);
+    }
+
+    @RequestMapping(value = {"/search"})
+    public ModelAndView searchByProvince(ModelMap map,HttpServletRequest request) {
+        String province=request.getParameter("province");
+        List<Dealer> dealers = dealerService.findDealerByProvince(province);
         map.put("dealers", dealers);
         return new ModelAndView("dealer/dealer", map);
     }

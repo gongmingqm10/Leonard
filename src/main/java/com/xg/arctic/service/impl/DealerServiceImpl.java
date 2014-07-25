@@ -36,4 +36,17 @@ public class DealerServiceImpl implements DealerService{
         }
         return dealers;
     }
+
+    @Override
+    public List<Dealer> findDealerByProvince(String province) {
+        List<Dealer> dealers = new ArrayList<Dealer>();
+        SqlSession session = factory.openSession();
+        try{
+            DealerMapper dealerMapper = session.getMapper(DealerMapper.class);
+            dealers = dealerMapper.findDealerByProvince(province);
+        } finally {
+            session.close();
+        }
+        return dealers;
+    }
 }

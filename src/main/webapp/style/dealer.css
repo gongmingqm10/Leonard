@@ -108,6 +108,7 @@ color: #464646;
 
 #dealer-table tr td.name{
     width:32%;
+     vertical-align: middle;
 }
 #dealer-table tr td.type{
     width:12%;
@@ -126,6 +127,7 @@ color: #464646;
 }
 #dealer-table tr td.address{
     width:30%;
+     vertical-align: middle;
 }
 
 
