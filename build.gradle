@@ -18,7 +18,7 @@ dependencies {
     compile "org.springframework:spring-web:${springFrameworkVersion}",
             "org.springframework:spring-webmvc:${springFrameworkVersion}",
             "org.springframework:spring-beans:${springFrameworkVersion}",
-            "org.springframework:spring-context:${springFrameworkVersion}"
+            "org.springframework:spring-context:${springFrameworkVersion}",
             "org.springframework:spring-jdbc:${springFrameworkVersion}"
 
 
