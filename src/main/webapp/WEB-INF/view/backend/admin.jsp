@@ -19,6 +19,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
     <script type="text/javascript" src="scripts/jquery-1.10.2.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="scripts/admin.js"></script>
 </head>
 
 <body>
@@ -102,11 +103,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                        </thead>
                        <tbody>
                             <tr>
-                                <td class="name">北京电器运用公司</td>
-                                <td class="type">直营经销商</td>
-                                <td class="saler">张凯利</td>
-                                <td class="phone">18901230343</td>
-                                <td class="address">北京小布里胡同35-36号</td>
+                                <td class="name"></td>
+                                <td class="type"></td>
+                                <td class="saler"></td>
+                                <td class="phone"></td>
+                                <td class="address"></td>
                                 <td class="action">
                                   <button type="button" class="btn btn-default">确定</button>
                                 </td>

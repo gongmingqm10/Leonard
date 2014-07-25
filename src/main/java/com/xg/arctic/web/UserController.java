@@ -31,7 +31,7 @@ public class UserController {
         dealerService = new DealerServiceImpl(MyBatisUtil.getSqlSessionFactory());
     }
 
-
+//    @RequestMapping("/")
     public ModelAndView loadUserList(ModelMap map) {
         List<User> users = userService.findAllUser();
         map.put("users", users);

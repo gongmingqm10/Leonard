@@ -44,3 +44,6 @@ table tr td.name{
 .btn-add{
     float:right;
 }
+.cellEdited{
+    color:red;
+}
