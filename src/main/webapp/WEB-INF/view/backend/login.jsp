@@ -51,3 +51,4 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <%@ include file="../footer.jsp" %>
 
 </body>
+</html>

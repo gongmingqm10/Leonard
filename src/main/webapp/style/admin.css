@@ -1,0 +1,46 @@
+body{
+    background:#eee;
+}
+.content{
+    width:100%;
+}
+.left-content{
+    width:15%;
+    float:left;
+}
+.right-content{
+    width:83%;
+    float:right;
+}
+
+table tr td.name{
+    width:30%;
+     vertical-align: middle;
+}
+.dealer-table tr td.type{
+    width:8%;
+    text-align: center;
+    vertical-align: middle;
+}
+.dealer-table tr td.saler{
+    width:7%;
+    text-align: center;
+    vertical-align: middle;
+}
+.dealer-table tr td.phone{
+    width:10%;
+    text-align: center;
+    vertical-align: middle;
+}
+.dealer-table tr td.address{
+    width:25%;
+    vertical-align: middle;
+}
+.dealer-table tr td.action{
+    width:20%;
+    text-align: center;
+    vertical-align: middle;
+}
+.btn-add{
+    float:right;
+}

@@ -1,6 +1,8 @@
 package com.xg.arctic.web;
 
+import com.xg.arctic.model.Dealer;
 import com.xg.arctic.model.User;
+import com.xg.arctic.service.impl.DealerServiceImpl;
 import com.xg.arctic.service.impl.UserServiceImpl;
 import com.xg.arctic.util.MyBatisUtil;
 import org.springframework.stereotype.Controller;
@@ -22,9 +24,11 @@ import java.util.List;
 public class UserController {
 
     private UserServiceImpl userService;
+    private DealerServiceImpl dealerService;
 
     public UserController() {
         userService = new UserServiceImpl(MyBatisUtil.getSqlSessionFactory());
+        dealerService = new DealerServiceImpl(MyBatisUtil.getSqlSessionFactory());
     }
 
 
@@ -47,7 +51,9 @@ public class UserController {
         List<User> users=userService.findUserByName(userName);
         if(users.isEmpty()) str="用户名不存在！";
         else if(users.get(0).getPassword().equals(password)) {
-            return new ModelAndView("test", map);
+            List<Dealer> dealers = dealerService.findAllDealer();
+            map.put("dealers", dealers);
+            return new ModelAndView("backend/admin", map);
         }
 
         map.put("str",str)  ;
