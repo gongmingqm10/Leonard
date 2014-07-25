@@ -1,6 +1,7 @@
 package com.xg.arctic.mappers;
 
 import com.xg.arctic.model.Dealer;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Select;
 
 
@@ -14,14 +15,19 @@ import java.util.List;
  */
 public interface DealerMapper {
     @Select(
-            "SELECT dealerName, type, salerName, phone, address, province FROM dealer"
+            "SELECT id, dealerName, type, salerName, phone, address, province FROM dealer"
     )
     List<Dealer> findAllDealers();
 
     @Select(
-            "SELECT dealerName, type, salerName, phone, address, province FROM dealer" +
+            "SELECT id, dealerName, type, salerName, phone, address, province FROM dealer" +
                     " where province =  #{province}"
     )
      //#{province}
     List<Dealer> findDealerByProvince(String province);
+
+    @Delete(
+            "DELETE FROM dealer WHERE id = #{id}"
+    )
+    void deleteDealerById(long id);
 }

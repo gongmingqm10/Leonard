@@ -72,9 +72,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                   <td class="phone"><c:out value="${dealer.phone}"/></td>
                                   <td class="address"><c:out value="${dealer.address}"/></td>
                                   <td class="action">
-                                    <button type="button" class="btn btn-default">编辑</button>
                                     <button type="button" class="btn btn-default" disabled="disabled">保存</button>
-                                    <button type="button" class="btn btn-default">修改</button>
+                                    <button type="button" class="btn btn-default" onclick="deleteItem(${dealer.id});">删除</button>
                                   </td>
                               </tr>
                           </c:forEach>

@@ -43,6 +43,15 @@ public class DealerController {
         map.put("dealers", dealers);
         return new ModelAndView("dealer/dealer", map);
     }
+    @RequestMapping(value = {"/delete"})
+    public ModelAndView deleteById(ModelMap map,HttpServletRequest request){
+        long id=Integer.parseInt(request.getParameter("id"));
+        dealerService.deleteDealerById(id);
+        List<Dealer> dealers = dealerService.findAllDealer();
+        map.put("dealers", dealers);
+        return new ModelAndView("backend/admin", map);
+    }
+
 
 
 }

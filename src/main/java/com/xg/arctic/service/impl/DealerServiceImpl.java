@@ -49,4 +49,16 @@ public class DealerServiceImpl implements DealerService{
         }
         return dealers;
     }
+
+    @Override
+    public void deleteDealerById(long id) {
+        SqlSession session = factory.openSession();
+        try{
+            DealerMapper dealerMapper = session.getMapper(DealerMapper.class);
+            dealerMapper.deleteDealerById(id);
+            session.commit();
+        } finally {
+            session.close();
+        }
+    }
 }
