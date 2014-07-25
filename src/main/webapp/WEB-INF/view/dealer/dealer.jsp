@@ -1,4 +1,6 @@
 <%@ include file="../header.jsp" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="pageTitle" scope="request" value="users"/>
 <link rel="stylesheet" href="style/dealer.css" type="text/css"/>
 <script type="text/javascript" src="scripts/dealer.js"></script>
 
@@ -148,20 +150,15 @@
                       </tr>
                    </thead>
                    <tbody>
-                      <tr>
-                         <td class="col-md-3">北京北汽摩有限公司</td>
-                         <td class="col-md-1.7">专营经销商</td>
-                         <td class="col-md-1.3">吴国权</td>
-                         <td class="col-md-1.5">13901395737</td>
-                         <td class="col-md-4.5">北京朝阳区金蝉西路甲一号酷车小镇D1-1</td>
-                      </tr>
-                      <tr>
-                         <td>北京北汽摩有限公司</td>
-                          <td>专营经销商</td>
-                          <td>吴国权</td>
-                          <td>13901395737</td>
-                          <td>北京朝阳区金蝉西路甲一号酷车小镇D1-1</td>
-                      </tr>
+                      <c:forEach var="dealer" items="${dealers}" varStatus="row">
+                          <tr>
+                              <td class="name"><c:out value="${dealer.dealerName}"/></td>
+                              <td class="type"><c:out value="${dealer.type}"/></td>
+                              <td class="saler"><c:out value="${dealer.salerName}"/></td>
+                              <td class="phone"><c:out value="${dealer.phone}"/></td>
+                              <td class="address"><c:out value="${dealer.address}"/></td>
+                          </tr>
+                      </c:forEach>
                    </tbody>
                 </table>
             </div>

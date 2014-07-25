@@ -12,11 +12,11 @@
         </tr>
     </thead>
     <tbody>
-        <c:forEach var="user" items="${users}" varStatus="row">
+        <c:forEach var="user" items="${dealers}" varStatus="row">
             <tr>
-                <td><c:out value="${user.name}"/></td>
-                <td><c:out value="${user.id}"/></td>
-                <td><c:out value="${user.price}"/></td>
+                <td><c:out value="${user.dealerName}"/></td>
+                <td><c:out value="${user.province}"/></td>
+                <td><c:out value="${user.type}"/></td>
             </tr>
         </c:forEach>
     </tbody>
