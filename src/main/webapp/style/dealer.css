@@ -105,3 +105,27 @@ body {
 .mapBox li button.point.p10{top: 130px;left: 150px;}
 .mapBox li button.point.p11{top: 140px;left:512px;}
 .mapBox li button.point.p12{top: 418px;left:396px;}
+
+#dealer-table tr td.name{
+    width:32%;
+}
+#dealer-table tr td.type{
+    width:12%;
+    text-align: center;
+    vertical-align: middle;
+}
+#dealer-table tr td.saler{
+    width:10%;
+    text-align: center;
+    vertical-align: middle;
+}
+#dealer-table tr td.phone{
+    width:16%;
+    text-align: center;
+    vertical-align: middle;
+}
+#dealer-table tr td.address{
+    width:30%;
+}
+
+
