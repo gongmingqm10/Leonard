@@ -1,7 +1,7 @@
 body {
-background: #000000 url("../images/dealer/body.gif") center top repeat-y;
-font-size: 12px;
-color: #464646;
+    background: #000000 url("../images/dealer/body.gif") center top repeat-y;
+    font-size: 12px;
+    color: #464646;
 }
 .pageBox{
     background: url(../images/dealer/dealer-bg.jpg) center top no-repeat;
