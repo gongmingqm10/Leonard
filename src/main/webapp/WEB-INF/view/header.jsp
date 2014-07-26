@@ -74,7 +74,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class="nav-content" id="nav-content1">
             <div class="row text-center nav-row">
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Snow/models/thumbnails/2015/Pantera_7000_LTD_Blk.png" alt="">
+                    <img src="images/header/dd1.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>
@@ -84,7 +84,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </P>
                 </div>
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Snow/models/thumbnails/2015/Bearcat_5000_XT_Blue.png" alt="">
+                    <img src="images/header/dd2.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>
@@ -94,7 +94,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </P>
                 </div>
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Snow/models/thumbnails/2015/Lynx_2000_TAGrn.png" alt="">
+                    <img src="images/header/dd3.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>
@@ -104,7 +104,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </P>
                 </div>
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Dirt/models/category-thumbs/WildcatX_thumbnail.png" alt="">
+                    <img src="images/header/dd4.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>
@@ -114,7 +114,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </P>
                 </div>
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Dirt/models/category-thumbs/Prowler_700_XTX_thumbnail.png" alt="">
+                    <img src="images/header/dd5.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>
@@ -124,7 +124,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </P>
                 </div>
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Dirt/models/category-thumbs/Prowler_700_HDX_LTD_thumbnail.png" alt="">
+                    <img src="images/header/dd6.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>
@@ -144,7 +144,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class="nav-content" id="nav-content2">
             <div class="row text-center nav-row">
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Snow/models/thumbnails/2015/Pantera_7000_LTD_Blk.png" alt="">
+                    <img src="images/header/dd1.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>
@@ -154,7 +154,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </P>
                 </div>
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Snow/models/thumbnails/2015/Bearcat_5000_XT_Blue.png" alt="">
+                    <img src="images/header/dd2.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>
@@ -164,7 +164,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </P>
                 </div>
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Snow/models/thumbnails/2015/Lynx_2000_TAGrn.png" alt="">
+                    <img src="images/header/dd3.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>
@@ -174,7 +174,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </P>
                 </div>
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Dirt/models/category-thumbs/WildcatX_thumbnail.png" alt="">
+                    <img src="images/header/dd4.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>
@@ -184,7 +184,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </P>
                 </div>
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Dirt/models/category-thumbs/Prowler_700_XTX_thumbnail.png" alt="">
+                    <img src="images/header/dd5.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>
@@ -194,7 +194,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </P>
                 </div>
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Dirt/models/category-thumbs/Prowler_700_HDX_LTD_thumbnail.png" alt="">
+                    <img src="images/header/dd6.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>
@@ -214,7 +214,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class="nav-content" id="nav-content3">
             <div class="row text-center nav-row">
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Snow/models/thumbnails/2015/Pantera_7000_LTD_Blk.png" alt="">
+                    <img src="images/header/dd1.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>
@@ -224,7 +224,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </P>
                 </div>
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Snow/models/thumbnails/2015/Bearcat_5000_XT_Blue.png" alt="">
+                    <img src="images/header/dd2.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>
@@ -234,7 +234,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </P>
                 </div>
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Snow/models/thumbnails/2015/Lynx_2000_TAGrn.png" alt="">
+                    <img src="images/header/dd3.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>
@@ -244,7 +244,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </P>
                 </div>
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Dirt/models/category-thumbs/WildcatX_thumbnail.png" alt="">
+                    <img src="images/header/dd4.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>
@@ -254,7 +254,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </P>
                 </div>
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Dirt/models/category-thumbs/Prowler_700_XTX_thumbnail.png" alt="">
+                    <img src="images/header/dd5.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>
@@ -264,7 +264,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </P>
                 </div>
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Dirt/models/category-thumbs/Prowler_700_HDX_LTD_thumbnail.png" alt="">
+                    <img src="images/header/dd6.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>
@@ -284,7 +284,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class="nav-content" id="nav-content4">
             <div class="row text-center nav-row">
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Snow/models/thumbnails/2015/Pantera_7000_LTD_Blk.png" alt="">
+                    <img src="images/header/dd1.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>
@@ -294,7 +294,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </P>
                 </div>
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Snow/models/thumbnails/2015/Bearcat_5000_XT_Blue.png" alt="">
+                    <img src="images/header/dd2.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>
@@ -304,7 +304,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </P>
                 </div>
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Snow/models/thumbnails/2015/Lynx_2000_TAGrn.png" alt="">
+                    <img src="images/header/dd3.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>
@@ -314,7 +314,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </P>
                 </div>
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Dirt/models/category-thumbs/WildcatX_thumbnail.png" alt="">
+                    <img src="images/header/dd4.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>
@@ -324,7 +324,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </P>
                 </div>
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Dirt/models/category-thumbs/Prowler_700_XTX_thumbnail.png" alt="">
+                    <img src="images/header/dd5.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>
@@ -334,7 +334,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </P>
                 </div>
                 <div class="col-md-4 row-border">
-                    <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/Dirt/models/category-thumbs/Prowler_700_HDX_LTD_thumbnail.png" alt="">
+                    <img src="images/header/dd6.png" alt="">
                     <h4>RE CREATION</h4>
                     <h5>BIG BORE</h5>
                     <P>

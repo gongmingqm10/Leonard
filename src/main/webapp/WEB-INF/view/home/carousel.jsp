@@ -10,28 +10,28 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/FFEs/Homepage/wildcat-trail-dark.jpg" alt="...">
+      <img src="images/header/header1.jpg" alt="...">
       <div class="carousel-caption" style="text-align:left;">
           <h2>First Thumbnail label</h2>
           <h3>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</h3>
        </div>
     </div>
     <div class="item">
-      <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/FFEs/Homepage/ProcrossZR-FFE-2015.jpg" alt="...">
+      <img src="images/header/header2.jpg" alt="...">
       <div class="carousel-caption" style="text-align:left;">
           <h2>Second Thumbnail label</h2>
           <h3>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</h3>
        </div>
     </div>
     <div class="item">
-      <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/FFEs/Homepage/2015-SpecialEdition-FFE-dark.jpg" alt="...">
+      <img src="images/header/header3.jpg" alt="...">
       <div class="carousel-caption" style="text-align:left;">
           <h2>Third Thumbnail label</h2>
           <h3>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</h3>
       </div>
     </div>
     <div class="item">
-      <img src="http://9a0b5d7f0ef6546c8faa-12bbacad9ccafd4e0f1837cb31a8f8ea.r30.cf2.rackcdn.com/FFEs/Homepage/Prowler500HDX.jpg" alt="...">
+      <img src="images/header/header4.jpg" alt="...">
       <div class="carousel-caption" style="text-align:left;">
           <h2>Forth Thumbnail label</h2>
           <h3>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</h3>
