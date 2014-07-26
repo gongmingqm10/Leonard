@@ -25,9 +25,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div class="header-container">
     <div class="head-btn">
         <img src="http://intl.arcticcat.com/img/language/intl.png" alt="">&nbsp;
-        <a href="#">English</a>
+        <a href="javascript:void(0);">English</a>
         <span>|</span>
-        <span>Customer Care</span>
+        <a href="http://intl.arcticcat.com/customer_care"><span>Customer Care</span></a>
+        <span>|</span>
+        <a href="login/"><span>Login</span></a>
     </div>
     <nav class="navbar navbar-inverse header-nav" role="navigation">
         <div class="navbar-header">
@@ -63,7 +65,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           </ul>
         </div>
         <div class="navbar-right" style="margin:12px;">
-           <a href="#"><span style="font-size: 12px;color:grey;">BECOME A DEALER</span></a>
+           <a href="javascript:void(0);"><span style="font-size: 12px;color:grey;">BECOME A DEALER</span></a>
            <span style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</span>
            <a href="dealer/"><span style="font-size: 12px;color:grey;">FIND A DEALER</span></a>
         </div>

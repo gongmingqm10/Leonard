@@ -9,7 +9,7 @@
         <div class="lv_tree">
             <p class="columnTitle">经销商</p>
             <div class="lv_tree_con">
-                 当前位置：<a href="/">首页</a>&nbsp;-&nbsp;<a href="./">经销商</a>&nbsp;-&nbsp;<span>经销商网络</span>
+                 当前位置：<a href="javascript:void(0);">首页</a>&nbsp;-&nbsp;<a href="javascript:void(0);">经销商</a>&nbsp;-&nbsp;<span>经销商网络</span>
             </div>
          </div>
     </div>

@@ -39,7 +39,10 @@ public class DealerController {
     @RequestMapping(value = {"/search"})
     public ModelAndView searchByProvince(ModelMap map,HttpServletRequest request) {
         String province=request.getParameter("province");
-        List<Dealer> dealers = dealerService.findDealerByProvince(province);
+        List<Dealer> dealers;
+        if(province.equals("请选择一个省份"))
+            dealers = dealerService.findAllDealer();
+        else dealers = dealerService.findDealerByProvince(province);
         map.put("dealers", dealers);
         return new ModelAndView("dealer/dealer", map);
     }
