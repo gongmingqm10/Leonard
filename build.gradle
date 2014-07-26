@@ -38,4 +38,8 @@ dependencies {
             'log4j:log4j:1.2.16'
 }
 
+task makeDev(type: Exec) {
+    commandLine "./db.sh"
+}
+
 httpPort = 8080
