@@ -12,4 +12,13 @@ import java.util.List;
  */
 public interface DealerService {
     List<Dealer> findAllDealer();
+
+    List<Dealer> findDealerByProvince(String province);
+
+    void deleteDealerById(long id);
+
+    void updateDealerById(long id, String dealer, String type, String saler, String phone, String address);
+
+    public void addDealer(String dealer, String type, String saler, String phone, String address, String province);
+
 }

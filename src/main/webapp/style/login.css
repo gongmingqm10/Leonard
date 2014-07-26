@@ -1,0 +1,16 @@
+body{
+    background:#eee;
+}
+
+.login-header{
+    margin-top:80px;
+
+}
+
+
+.login-content{
+    width:50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top:30px;
+}

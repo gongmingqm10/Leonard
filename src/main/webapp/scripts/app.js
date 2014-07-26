@@ -9,6 +9,4 @@ function showPanel(e) {
     } else {
         content.slideDown('slow', function(){});
     }
-
-
 }

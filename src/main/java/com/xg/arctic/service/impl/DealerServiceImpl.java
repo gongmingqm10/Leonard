@@ -36,4 +36,53 @@ public class DealerServiceImpl implements DealerService{
         }
         return dealers;
     }
+
+    @Override
+    public List<Dealer> findDealerByProvince(String province) {
+        List<Dealer> dealers = new ArrayList<Dealer>();
+        SqlSession session = factory.openSession();
+        try{
+            DealerMapper dealerMapper = session.getMapper(DealerMapper.class);
+            dealers = dealerMapper.findDealerByProvince(province);
+        } finally {
+            session.close();
+        }
+        return dealers;
+    }
+
+    @Override
+    public void deleteDealerById(long id) {
+        SqlSession session = factory.openSession();
+        try{
+            DealerMapper dealerMapper = session.getMapper(DealerMapper.class);
+            dealerMapper.deleteDealerById(id);
+            session.commit();
+        } finally {
+            session.close();
+        }
+    }
+
+    @Override
+    public void updateDealerById(long id, String dealer, String type, String saler, String phone, String address) {
+        SqlSession session = factory.openSession();
+        try {
+            DealerMapper dealerMapper = session.getMapper(DealerMapper.class);
+            dealerMapper.updateDealerById(id, dealer, type, saler, phone, address);
+            session.commit();
+        } finally {
+
+        }
+    }
+
+    @Override
+    public void addDealer(String dealer, String type, String saler, String phone, String address, String province) {
+        SqlSession session = factory.openSession();
+        try {
+            DealerMapper dealerMapper = session.getMapper(DealerMapper.class);
+            dealerMapper.addDealer(dealer, type, saler, phone, address,province);
+            session.commit();
+        } finally {
+
+        }
+    }
 }

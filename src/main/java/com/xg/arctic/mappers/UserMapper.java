@@ -14,8 +14,13 @@ import java.util.List;
 public interface UserMapper {
 
     @Select(
-            "SELECT id, name, price FROM user"
+            "SELECT id, userName, password FROM user"
     )
     List<User> findAllUsers();
 
+    @Select(
+            "SELECT id, userName, password FROM user" +
+                    " where userName = #{userName}"
+    )
+    List<User> findUserByName(String userName);
 }

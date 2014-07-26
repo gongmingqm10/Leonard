@@ -119,8 +119,8 @@
                 </ul>
             </div>
             <div class="search-bar">
-                 <form class="navbar-form navbar-left" role="search">
-                   <select class="form-control">
+                 <form class="navbar-form navbar-left" action="dealer/search" role="search">
+                   <select class="form-control" name="province">
                         <option>请选择一个省份</option>
                         <option>北京</option>
                         <option>上海</option>
@@ -165,6 +165,7 @@
         </div>
     </div>
 </div>
+
 
 
 
