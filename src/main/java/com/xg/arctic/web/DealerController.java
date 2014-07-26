@@ -65,6 +65,20 @@ public class DealerController {
         return new ModelAndView("backend/admin", map);
     }
 
+    @RequestMapping(value = {"/add"})
+    public ModelAndView add(ModelMap map,HttpServletRequest request){
+        String dealer=request.getParameter("dealer");
+        String type=request.getParameter("type");
+        String saler=request.getParameter("saler");
+        String phone=request.getParameter("phone");
+        String address=request.getParameter("address");
+        String province=request.getParameter("province");
+        dealerService.addDealer(dealer,type,saler,phone,address,province);
+        List<Dealer> dealers = dealerService.findAllDealer();
+        map.put("dealers", dealers);
+        return new ModelAndView("backend/admin", map);
+    }
+
 
 
 }

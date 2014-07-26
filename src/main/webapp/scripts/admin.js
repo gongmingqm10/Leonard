@@ -102,3 +102,60 @@ function updateItem(id, element){
             form.submit();
         }
 }
+
+function addItem(element){
+        var element=$(element);
+
+        var r=confirm("是否确定添加此记录?");
+        if (r==true)
+        {
+            $(element).attr('disabled','disabled');
+            var children=$(element).parent().parent().children();
+
+            var form = document.createElement("form");
+            form.setAttribute("action", "dealer/add");
+            form.setAttribute("method", "UPDATE");
+
+            var str=$(children[0]).text();
+            var hiddenDealer = document.createElement("input");
+            hiddenDealer.setAttribute("name", "dealer");
+            hiddenDealer.setAttribute("value", $(children[0]).text());
+            hiddenDealer.setAttribute("type", "hidden");
+            form.appendChild(hiddenDealer);
+
+            var hiddenDealer = document.createElement("input");
+            hiddenDealer.setAttribute("name", "type");
+            hiddenDealer.setAttribute("value", $(children[1]).text());
+            hiddenDealer.setAttribute("type", "hidden");
+            form.appendChild(hiddenDealer);
+
+            var hiddenDealer = document.createElement("input");
+            hiddenDealer.setAttribute("name", "saler");
+            hiddenDealer.setAttribute("value", $(children[2]).text());
+            hiddenDealer.setAttribute("type", "hidden");
+            form.appendChild(hiddenDealer);
+
+
+            var hiddenDealer = document.createElement("input");
+            hiddenDealer.setAttribute("name", "phone");
+            hiddenDealer.setAttribute("value", $(children[3]).text());
+            hiddenDealer.setAttribute("type", "hidden");
+            form.appendChild(hiddenDealer);
+
+
+            var hiddenDealer = document.createElement("input");
+            hiddenDealer.setAttribute("name", "address");
+            hiddenDealer.setAttribute("value", $(children[4]).text());
+            hiddenDealer.setAttribute("type", "hidden");
+            form.appendChild(hiddenDealer);
+
+            var hiddenDealer = document.createElement("input");
+            hiddenDealer.setAttribute("name", "province");
+            hiddenDealer.setAttribute("value", $(children[5]).text());
+            hiddenDealer.setAttribute("type", "hidden");
+            form.appendChild(hiddenDealer);
+
+            document.body.appendChild(form);
+            form.submit();
+        }
+}

@@ -41,6 +41,11 @@ table tr td.name{
     text-align: center;
     vertical-align: middle;
 }
+.dealer-table tr td.province{
+    width:8%;
+    text-align: center;
+    vertical-align: middle;
+}
 .btn-add{
     float:right;
 }

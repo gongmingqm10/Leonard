@@ -30,7 +30,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </div>
             <div class="navbar-collapse collapse">
               <form class="navbar-form navbar-right" role="form">
-                <button type="submit" class="btn btn-success btn-lg">&nbsp;Logout&nbsp;</button>
+                <a href="javascript:void(0);"><button type="submit" class="btn btn-success btn-lg">&nbsp;Logout&nbsp;</button></>
                 <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
               </form>
             </div>
@@ -82,7 +82,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </div>
               </div>
             </div>
-            <button class='btn-add' type="button" class="btn btn-default ">添加</button>
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h3 class="panel-title">经销商管理</h3>
@@ -97,6 +96,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                              <th class="text-center">销售人员</th>
                              <th class="text-center">销售热线</th>
                              <th class="text-center">地址</th>
+                             <th class="text-center">省份</th>
                              <th class="text-center">操作</th>
                           </tr>
                        </thead>
@@ -107,8 +107,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                 <td class="saler"></td>
                                 <td class="phone"></td>
                                 <td class="address"></td>
+                                <td class="province"></td>
                                 <td class="action">
-                                  <button type="button" class="btn btn-default">确定</button>
+                                  <button type="button" class="btn btn-default" disabled="disabled" onclick="addItem(this);">确定</button>
                                 </td>
                             </tr>
                        <tbody>

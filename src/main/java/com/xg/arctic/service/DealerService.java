@@ -19,4 +19,6 @@ public interface DealerService {
 
     void updateDealerById(long id, String dealer, String type, String saler, String phone, String address);
 
+    public void addDealer(String dealer, String type, String saler, String phone, String address, String province);
+
 }

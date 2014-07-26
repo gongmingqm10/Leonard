@@ -2,6 +2,7 @@ package com.xg.arctic.mappers;
 
 import com.xg.arctic.model.Dealer;
 import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
@@ -39,5 +40,11 @@ public interface DealerMapper {
                     " WHERE id=#{param1}"
     )
     void updateDealerById(long id, String dealer, String type, String saler, String phone, String address);
+
+    @Insert(
+            "INSERT INTO dealer(dealerName, type, salerName, phone, address, province) " +
+                    "VALUES (#{param1}, #{param2}, #{param3}, #{param4}, #{param5}, #{param6})"
+    )
+    void addDealer(String dealer, String type, String saler, String phone, String address, String province);
 
 }
