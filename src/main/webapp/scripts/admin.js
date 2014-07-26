@@ -1,26 +1,30 @@
 
 $(function () {
     $("td").dblclick(function () {
-        var OriginalContent = $(this).text();
-          
-        $(this).addClass("cellEditing");
-        $(this).html("<input type='text' value='" + OriginalContent + "' />");
-        $(this).children().first().focus();
-        $(this).children().first().keypress(function (e) {
-            if (e.which == 13) {
-                $(this).parent().removeClass("cellEditing");
-                $(this).parent().addClass("cellEdited");
-                $(this).parent().parent().children().last().children().first().removeAttr('disabled');
-                var newContent = $(this).val();
-                $(this).parent().text(newContent);
+        var classList =$(this).attr('class').split(/\s+/);
+        if(classList[0]!=='action'){
 
-            }
-        });
-          
-        $(this).children().first().blur(function(){
-            $(this).parent().removeClass("cellEditing");
-            $(this).parent().text(OriginalContent);
-        });
+            var OriginalContent = $(this).text();
+
+            $(this).addClass("cellEditing");
+            $(this).html("<input type='text' value='" + OriginalContent + "' />");
+            $(this).children().first().focus();
+            $(this).children().first().keypress(function (e) {
+                if (e.which == 13) {
+                    $(this).parent().removeClass("cellEditing");
+                    $(this).parent().addClass("cellEdited");
+                    $(this).parent().parent().children().last().children().first().removeAttr('disabled');
+                    var newContent = $(this).val();
+                    $(this).parent().text(newContent);
+
+                }
+            });
+
+            $(this).children().first().blur(function(){
+                $(this).parent().removeClass("cellEditing");
+                $(this).parent().text(OriginalContent);
+            });
+        }
     });
 
 });
