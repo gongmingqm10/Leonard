@@ -16,4 +16,7 @@ public interface DealerService {
     List<Dealer> findDealerByProvince(String province);
 
     void deleteDealerById(long id);
+
+    void updateDealerById(long id, String dealer, String type, String saler, String phone, String address);
+
 }

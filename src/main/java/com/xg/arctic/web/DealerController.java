@@ -51,6 +51,19 @@ public class DealerController {
         map.put("dealers", dealers);
         return new ModelAndView("backend/admin", map);
     }
+    @RequestMapping(value = {"/update"})
+    public ModelAndView updateById(ModelMap map,HttpServletRequest request){
+        long id=Integer.parseInt(request.getParameter("id"));
+        String dealer=request.getParameter("dealer");
+        String type=request.getParameter("type");
+        String saler=request.getParameter("saler");
+        String phone=request.getParameter("phone");
+        String address=request.getParameter("address");
+        dealerService.updateDealerById(id,dealer,type,saler,phone,address);
+        List<Dealer> dealers = dealerService.findAllDealer();
+        map.put("dealers", dealers);
+        return new ModelAndView("backend/admin", map);
+    }
 
 
 

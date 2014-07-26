@@ -3,6 +3,7 @@ package com.xg.arctic.mappers;
 import com.xg.arctic.model.Dealer;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 
 import java.util.List;
@@ -30,4 +31,13 @@ public interface DealerMapper {
             "DELETE FROM dealer WHERE id = #{id}"
     )
     void deleteDealerById(long id);
+
+    @Update(
+            "UPDATE dealer " +
+                    "SET dealerName=#{param2}, type=#{param3}, salerName=#{param4}," +
+                    " phone=#{param5}, address=#{param6}" +
+                    " WHERE id=#{param1}"
+    )
+    void updateDealerById(long id, String dealer, String type, String saler, String phone, String address);
+
 }

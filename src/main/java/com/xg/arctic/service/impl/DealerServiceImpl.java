@@ -61,4 +61,16 @@ public class DealerServiceImpl implements DealerService{
             session.close();
         }
     }
+
+    @Override
+    public void updateDealerById(long id, String dealer, String type, String saler, String phone, String address) {
+        SqlSession session = factory.openSession();
+        try {
+            DealerMapper dealerMapper = session.getMapper(DealerMapper.class);
+            dealerMapper.updateDealerById(id, dealer, type, saler, phone, address);
+            session.commit();
+        } finally {
+
+        }
+    }
 }
