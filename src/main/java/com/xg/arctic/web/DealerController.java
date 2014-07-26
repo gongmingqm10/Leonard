@@ -50,11 +50,10 @@ public class DealerController {
     public ModelAndView deleteById(ModelMap map,HttpServletRequest request){
         long id=Integer.parseInt(request.getParameter("id"));
         dealerService.deleteDealerById(id);
-        List<Dealer> dealers = dealerService.findAllDealer();
-        map.put("dealers", dealers);
-        return new ModelAndView("backend/admin", map);
+
+        return new ModelAndView("redirect:/admin", map);
     }
-    @RequestMapping(value = {"/update"})
+    @RequestMapping(value = {"/update"}, method = RequestMethod.POST)
     public ModelAndView updateById(ModelMap map,HttpServletRequest request){
         long id=Integer.parseInt(request.getParameter("id"));
         String dealer=request.getParameter("dealer");
@@ -63,12 +62,11 @@ public class DealerController {
         String phone=request.getParameter("phone");
         String address=request.getParameter("address");
         dealerService.updateDealerById(id,dealer,type,saler,phone,address);
-        List<Dealer> dealers = dealerService.findAllDealer();
-        map.put("dealers", dealers);
-        return new ModelAndView("backend/admin", map);
+
+        return new ModelAndView("redirect:/admin", map);
     }
 
-    @RequestMapping(value = {"/add"})
+    @RequestMapping(value = {"/add"},method = RequestMethod.POST)
     public ModelAndView add(ModelMap map,HttpServletRequest request){
         String dealer=request.getParameter("dealer");
         String type=request.getParameter("type");
@@ -77,9 +75,8 @@ public class DealerController {
         String address=request.getParameter("address");
         String province=request.getParameter("province");
         dealerService.addDealer(dealer,type,saler,phone,address,province);
-        List<Dealer> dealers = dealerService.findAllDealer();
-        map.put("dealers", dealers);
-        return new ModelAndView("backend/admin", map);
+
+        return new ModelAndView("redirect:/admin", map);
     }
 
 

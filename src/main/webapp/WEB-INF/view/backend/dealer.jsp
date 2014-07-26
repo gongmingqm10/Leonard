@@ -1,4 +1,6 @@
 <%@ include file="admin.jsp" %>
+<script type="text/javascript" src="scripts/backend/dealer.js"></script>
+
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h3 class="panel-title">经销商管理</h3>

@@ -20,7 +20,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
     <script type="text/javascript" src="scripts/jquery-1.10.2.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
-    <script type="text/javascript" src="scripts/admin.js"></script>
+    <script type="text/javascript" src="scripts/backend/admin.js"></script>
 </head>
 <body>
     <div class="header">
@@ -32,12 +32,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div class="container">
 
         <div class="left-content">
-            <ul class="nav nav-pills nav-stacked" role="tablist">
-                 <li role="presentation" class="active"><a href="admin/dealer">经销商管理</a></li>
-                 <li role="presentation" ><a href="admin/activity">俱乐部活动</a></li>
-                 <li role="presentation" ><a href="admin/news">新闻管理</a></li>
-                 <li role="presentation" ><a href="admin/product">产品管理</a></li>
-                 <li role="presentation" ><a href="admin/video">视频管理</a></li>
+            <ul id="menu-ul" class="nav nav-pills nav-stacked" role="tablist">
+                 <li role="presentation" class="dealer"><a href="admin/dealer" onClick="switchItem(this)">经销商管理</a></li>
+                 <li role="presentation" class="activity"><a href="admin/activity" onClick="switchItem(this)">俱乐部活动</a></li>
+                 <li role="presentation" class="news"><a href="admin/news" onClick="switchItem(this)">新闻管理</a></li>
+                 <li role="presentation" class="product"><a href="admin/product" onClick="switchItem(this)">产品管理</a></li>
+                 <li role="presentation" class="video"><a href="admin/video" onClick="switchItem(this)">视频管理</a></li>
             </ul>
         </div>
         <div class="right-content">

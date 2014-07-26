@@ -44,8 +44,7 @@ public class LoginController {
         List<User> users=userService.findUserByName(userName);
         if(users.isEmpty()) str="用户名不存在！";
         else if(users.get(0).getPassword().equals(password)) {
-            List<Dealer> dealers = dealerService.findAllDealer();
-            map.put("dealers", dealers);
+
             return new ModelAndView("redirect:/admin", map);
         }
 

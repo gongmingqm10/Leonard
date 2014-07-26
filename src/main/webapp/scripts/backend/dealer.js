@@ -13,9 +13,11 @@ $(function () {
                 if (e.which == 13) {
                     $(this).parent().removeClass("cellEditing");
                     $(this).parent().addClass("cellEdited");
-                    $(this).parent().parent().children().last().children().first().removeAttr('disabled');
+                    var element=$(this).parent().parent().children().last().children().first();
+                    element.removeAttr('disabled');
                     var newContent = $(this).val();
                     $(this).parent().text(newContent);
+                    element.focus();
 
                 }
             });
@@ -57,7 +59,7 @@ function updateItem(id, element){
 
             var form = document.createElement("form");
             form.setAttribute("action", "dealer/update");
-            form.setAttribute("method", "UPDATE");
+            form.setAttribute("method", "post");
 
             var hiddenDealer = document.createElement("input");
             hiddenDealer.setAttribute("name", "id");
@@ -114,7 +116,7 @@ function addItem(element){
 
             var form = document.createElement("form");
             form.setAttribute("action", "dealer/add");
-            form.setAttribute("method", "UPDATE");
+            form.setAttribute("method", "POST");
 
             var str=$(children[0]).text();
             var hiddenDealer = document.createElement("input");
