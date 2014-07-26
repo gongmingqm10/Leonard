@@ -6,11 +6,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
+@RequestMapping("/")
 public class HomeController {
 
-    @RequestMapping("home")
+    @RequestMapping(method = RequestMethod.GET)
+    public String home() {
+        return "redirect:/home";
+    }
+
+    @RequestMapping("/home")
     public String loadHomePage(Model m) {
-        m.addAttribute("name", "Xuhuan");
         return "home";
     }
+
 }

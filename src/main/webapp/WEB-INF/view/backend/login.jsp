@@ -27,7 +27,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <h1>北极动力后台管理</h1>
         </div>
         <div>
-            <form role="form" action="login/userLogin">
+            <form role="form" action="login", method="post">
               <div class="login-content">
                   <c:forEach var="message" items="${str}" varStatus="row">
                     <h3 style="font-style: italic;color: red;">注: <c:out value="${message}"/></h3>
