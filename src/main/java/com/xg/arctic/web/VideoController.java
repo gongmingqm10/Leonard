@@ -37,13 +37,14 @@ public class VideoController {
         return "video";
     }
 
-    @RequestMapping(value = {"/play"}, method = RequestMethod.POST)
-    public ModelAndView get(HttpServletRequest request, ModelMap map) {
-        long videoId=Integer.parseInt(request.getParameter("videoIdToPlay"));
-        Video video= fileService.findVideoById(videoId);
-        map.put("video",video);
-        return new ModelAndView("video",map);
+    @RequestMapping(value = {"/play/{videoId}"}, method = RequestMethod.GET)
+    public ModelAndView playVideoById(@PathVariable("videoId") String videoId, ModelMap map,HttpServletRequest request) {
+        long id = Integer.parseInt(videoId);
+        Video video = fileService.findVideoById(id);
+        map.put("video", video);
+        return new ModelAndView("video", map);
     }
+
 
     @RequestMapping(value = {"/delete"})
     public ModelAndView deleteById(ModelMap map,HttpServletRequest request){

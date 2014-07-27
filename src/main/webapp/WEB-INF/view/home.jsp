@@ -63,7 +63,7 @@
         <div class="row text-center">
             <c:forEach var="video" items="${videos}" varStatus="row">
                  <div class="col-md-3 social-border">
-                     <a href="javascript:void(0);" onClick="playVideo('${video.id}');"><img src="${video.image}" alt=""></a>
+                     <a href="video/play/${video.id}"><img src="${video.image}" alt=""></a>
                  </div>
             </c:forEach>
 
