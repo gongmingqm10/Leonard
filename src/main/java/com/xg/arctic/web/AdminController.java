@@ -1,15 +1,27 @@
 package com.xg.arctic.web;
 
 import com.xg.arctic.model.Dealer;
+import com.xg.arctic.model.Video;
+import com.xg.arctic.service.DealerService;
+import com.xg.arctic.service.FileService;
 import com.xg.arctic.service.impl.DealerServiceImpl;
+import com.xg.arctic.service.impl.FileServiceImpl;
 import com.xg.arctic.util.MyBatisUtil;
+import org.apache.commons.io.IOUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -20,11 +32,12 @@ import java.util.List;
 @RequestMapping("admin")
 public class AdminController {
 
-    private DealerServiceImpl dealerService;
+    private DealerService dealerService;
+    private FileService fileService;
 
     public AdminController() {
         dealerService = new DealerServiceImpl(MyBatisUtil.getSqlSessionFactory());
-
+        fileService = new FileServiceImpl(MyBatisUtil.getSqlSessionFactory());
     }
 
     @RequestMapping(method = RequestMethod.GET)
@@ -56,8 +69,59 @@ public class AdminController {
     }
 
     @RequestMapping(value = "/video", method = RequestMethod.GET)
-    public String loadVideoPage(Model m) {
-        return "backend/video";
+    public ModelAndView loadVideoPage(ModelMap map) {
+        List<Video> videos = fileService.findAllVideos();
+        map.put("videos", videos);
+        return new ModelAndView("backend/video", map);
     }
 
+    @RequestMapping(value = "/video/create", method = RequestMethod.GET)
+    public String loadVideoCreatePage(Model model) {
+        return "video/create";
+    }
+
+    @RequestMapping(value = "/video/create", method = RequestMethod.POST)
+    public ModelAndView createVideo(ModelMap map, HttpServletRequest request) {
+        String name = request.getParameter("name");
+        String image = request.getParameter("image");
+        String source = request.getParameter("source");
+        String filesize = request.getParameter("filesize");
+        Video video = new Video();
+        video.setFilename(name);
+        video.setSource(source);
+        video.setImage(image);
+        if (filesize != null && !filesize.equals("")) video.setFilesize(Integer.parseInt(filesize));
+        fileService.createVideo(video);
+        map.put("message", "视频保存成功");
+        return new ModelAndView("video/create", map);
+    }
+
+    @RequestMapping(value = "/video/upload", method = RequestMethod.POST)
+    public ModelAndView uploadFile(@RequestParam MultipartFile file,@RequestParam MultipartFile picture, ModelMap map) {
+        String filename = "uploads/" + file.getOriginalFilename();
+        String picName = "uploads/picture/" + picture.getOriginalFilename();
+        File copy = new File (filename);
+        try {
+            BufferedOutputStream stream =
+                    new BufferedOutputStream(new FileOutputStream(copy));
+            IOUtils.write(file.getBytes(), stream);
+            stream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        File copyPic = new File (picName);
+        try {
+            BufferedOutputStream stream =
+                    new BufferedOutputStream(new FileOutputStream(copyPic));
+            IOUtils.write(picture.getBytes(), stream);
+            stream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        map.put("url", filename);
+        map.put("picUrl", picName);
+        map.put("size", file.getSize());
+        map.put("message", "文件上传成功");
+        return new ModelAndView("video/create", map);
+    }
 }

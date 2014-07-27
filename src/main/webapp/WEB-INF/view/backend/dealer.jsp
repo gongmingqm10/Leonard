@@ -1,4 +1,5 @@
 <%@ include file="admin.jsp" %>
+ <link rel="stylesheet" href="style/backend/dealer.css" type="text/css"/>
 <script type="text/javascript" src="scripts/backend/dealer.js"></script>
 
             <div class="panel panel-default">

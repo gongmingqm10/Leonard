@@ -52,7 +52,7 @@ CREATE TABLE `files` (
   `scan` int(11) DEFAULT 0,
   `filename` varchar(255) NOT NULL,
   `filesize` BIGINT UNSIGNED,
-  `filetype` varchar(128),
+  `image` varchar(255),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
