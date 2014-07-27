@@ -3,6 +3,8 @@
 <c:set var="pageTitle" scope="request" value="首页"/>
 
 <link rel="stylesheet" href="style/home.css" type="text/css"/>
+<script type="text/javascript" src="scripts/home.js"></script>
+
 <%@ include file="home/carousel.jsp"%>
 <div class="container" >
     <div class="panel panel-default text-center" id="panel-find">
@@ -86,14 +88,7 @@
     </div>
 
 
-    <script type="text/javascript">
-    function playVideo(VideoId)
-    {
-        document.playVideoById.videoIdToPlay.value = VideoId;
-        document.playVideoById.submit();
-    }
 
-    </script>
     <form name="playVideoById" method="post" action='video/play' >
          <input type="hidden" id="videoIdToPlay" name="videoIdToPlay" value="" >
     </form>

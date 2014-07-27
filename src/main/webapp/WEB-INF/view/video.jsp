@@ -21,6 +21,13 @@
       <li role="presentation"><a href="javascript:void(0);">综合</a></li>
     </ul>
     <div class="video-container">
+        <c:forEach var="video" items="${videos}" varStatus="row">
+            <div class="col-md-3 video-item">
+                <a href="video/play/${video.id}"><img src="${video.image}" alt=""></a>
+                <p>${video.filename}</p>
+                <p><span class="glyphicon glyphicon-play">${video.scan}</span> &nbsp;&nbsp;&nbsp; <span class="glyphicon glyphicon-comment">3</span></p>
+            </div>
+        </c:forEach>
         <div class="col-md-3 video-item">
             <img src="images/video/car2.jpg">
             <p>春风铁马铁马冰河环渤海</p>

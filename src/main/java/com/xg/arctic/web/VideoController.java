@@ -20,6 +20,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.*;
+import java.util.List;
 
 /**
  * Created by minggong on 7/24/14.
@@ -43,6 +44,8 @@ public class VideoController {
         long id = Integer.parseInt(videoId);
         Video video = fileService.findVideoById(id);
         map.put("video", video);
+        List<Video> videos= fileService.findAllVideos();
+        map.put("videos", videos);
         return new ModelAndView("video", map);
     }
 
