@@ -19,6 +19,7 @@ import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.*;
 
 /**
  * Created by minggong on 7/24/14.
@@ -49,6 +50,30 @@ public class VideoController {
     @RequestMapping(value = {"/delete"})
     public ModelAndView deleteById(ModelMap map,HttpServletRequest request){
         long id=Integer.parseInt(request.getParameter("id"));
+        Video video=fileService.findVideoById(id);
+        Path path= FileSystems.getDefault().getPath("src/main/webapp/",video.getSource());
+        try {
+            Files.deleteIfExists(path);
+        } catch (NoSuchFileException x) {
+            System.err.format("%s: no such" + " file or directory%n", path);
+        } catch (DirectoryNotEmptyException x) {
+            System.err.format("%s not empty%n", path);
+        } catch (IOException x) {
+            // File permission problems are caught here.
+            System.err.println(x);
+        }
+        path= FileSystems.getDefault().getPath("src/main/webapp/",video.getImage());
+        try {
+            Files.deleteIfExists(path);
+        } catch (NoSuchFileException x) {
+            System.err.format("%s: no such" + " file or directory%n", path);
+        } catch (DirectoryNotEmptyException x) {
+            System.err.format("%s not empty%n", path);
+        } catch (IOException x) {
+            // File permission problems are caught here.
+            System.err.println(x);
+        }
+
         fileService.deleteVideoById(id);
 
         return new ModelAndView("redirect:/admin/video", map);
