@@ -37,7 +37,7 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public ModelAndView userLogin(ModelMap map,HttpServletRequest request){
+    public ModelAndView userLogin(ModelMap map, HttpServletRequest request){
         String userName=request.getParameter("userName");
         String password=request.getParameter("password");
         String str="用户密码错误！";
