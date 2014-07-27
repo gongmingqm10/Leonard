@@ -1,5 +1,7 @@
 <%@ include file="../backend/admin.jsp" %>
  <link rel="stylesheet" href="style/backend/upload.css" type="text/css"/>
+  <script type="text/javascript" src="scripts/backend/video.js"></script>
+
 
             <c:if test="${not empty message}">
                 <div class="alert alert-info alert-dismissible" role="alert">
@@ -11,14 +13,15 @@
             <form action="admin/video/upload" method="post" class="form-inline upload" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="file">上传视频：&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-                    <input type="file" class="form-control" name="file" required/>
+                    <input type="file" id="videoFile" onchange="readURL(this);" class="form-control" name="file" required/>
                 </div>
                 <br><br>
                 <div class="form-group">
                     <label for="picture">上传视频缩略图：</label>
-                    <input type="file" class="form-control" name="picture" required/>
+                    <input type="file" id="picFile" onchange="readPicURL(this);" class="form-control" name="picture" required/>
                 </div>
-                <button type="submit" class="btn btn-default btn-right">上传</button>
+
+                <button type="submit" class="btn btn-default btn-right" >上传</button>
             </form>
 
             <form action="admin/video/create"  method="post" role="form">

@@ -41,26 +41,7 @@
                 <p>2013重庆摩博会骑行中国</p>
                 <p><span class="glyphicon glyphicon-play">200</span> &nbsp;&nbsp;&nbsp; <span class="glyphicon glyphicon-comment">3</span></p>
         </div>
-        <div class="col-md-3 video-item">
-            <img src="images/video/car4.jpg">
-            <p>2013重庆摩博会狒狒改装大赛</p>
-            <p><span class="glyphicon glyphicon-play">200</span> &nbsp;&nbsp;&nbsp; <span class="glyphicon glyphicon-comment">3</span></p>
-        </div>
-        <div class="col-md-3 video-item">
-                <img src="images/video/car8.png">
-                <p>2012全国摩托车竞标赛（三水站）</p>
-                <p><span class="glyphicon glyphicon-play">200</span> &nbsp;&nbsp;&nbsp; <span class="glyphicon glyphicon-comment">3</span></p>
-        </div>
-        <div class="col-md-3 video-item">
-                <img src="images/video/car2.jpg">
-                <p>六档狒狒 玩乐升级 （测评）</p>
-                <p><span class="glyphicon glyphicon-play">200</span> &nbsp;&nbsp;&nbsp; <span class="glyphicon glyphicon-comment">3</span></p>
-        </div>
-        <div class="col-md-3 video-item">
-            <img src="images/video/car5.jpg">
-            <p>2013重庆摩博会狒狒改装大赛</p>
-            <p><span class="glyphicon glyphicon-play">200</span> &nbsp;&nbsp;&nbsp; <span class="glyphicon glyphicon-comment">3</span></p>
-        </div>
+
     </div>
 
     <div class="text-center pagination-container">

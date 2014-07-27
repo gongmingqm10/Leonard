@@ -14,3 +14,18 @@ function deleteVideo(id) {
         form.submit();
     }
 }
+
+function readURL(input) {
+    var fileName = $(input).val();
+    if(!(fileName.lastIndexOf("mp4")===fileName.length-3)){
+        input.value="";
+        alert("仅支持mp4格式视频！");
+    }
+}
+function readPicURL(input) {
+    var fileName = $(input).val();
+    if(!(fileName.lastIndexOf("jpg")===fileName.length-3)){
+        input.value="";
+        alert("仅支持jpg格式视频！");
+    }
+}
