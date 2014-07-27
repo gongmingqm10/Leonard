@@ -11,4 +11,6 @@ public interface FileService {
     void createVideo(Video video );
     List<Video> findAllVideos();
     public void deleteVideoById(long id);
+    public Video findVideoById(Long videoId) ;
+
 }

@@ -25,8 +25,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body>
     <div class="header">
         <div class="header-container">
-            <img src="images/footer/footer-logo.png">
-            <a href="logout" class="btn btn-primary">退出</a>
+            <a href="home"><img src="images/footer/footer-logo.png"></a>
+            <a  href="logout" class="btn btn-primary logout">退出</a>
         </div>
     </div>
     <div class="container">

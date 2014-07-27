@@ -16,12 +16,12 @@ body > .header {
 
 }
 
-.header-container > a {
+.header-container > a.logout {
     float: right;
     margin: 10px;
 }
 
-.header-container > img {
+.header-container >a> img {
     height: 35px;
     margin-top: 8px;
     margin-left: 10px;

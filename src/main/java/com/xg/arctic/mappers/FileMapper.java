@@ -28,4 +28,9 @@ public interface FileMapper {
             "DELETE FROM files WHERE id = #{id}"
     )
     void deleteVideoById(long id);
+
+    @Select(
+            "select id, filename, source, image, scan FROM files WHERE id= #{videoId}"
+    )
+    Video findVideoById(Long videoId);
 }

@@ -37,7 +37,7 @@
               </div>
 
               <button type="submit" class="btn btn-success">保存</button>
-              <button type="button" class="btn btn-default" onclick="location.href='admin/video'">取消</button>
+              <button type="button" class="btn btn-default" onclick="location.href='admin/video'">返回</button>
             </form>
 
 

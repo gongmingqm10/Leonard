@@ -1,11 +1,13 @@
 package com.xg.arctic.web;
 
+import com.xg.arctic.model.Video;
 import com.xg.arctic.service.impl.FileServiceImpl;
 import com.xg.arctic.util.MyBatisUtil;
 import org.apache.commons.io.IOUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -30,9 +32,17 @@ public class VideoController {
         this.fileService=new FileServiceImpl(MyBatisUtil.getSqlSessionFactory());;
     }
 
-    @RequestMapping(value = {"/{videoId}"}, method = RequestMethod.GET)
-    public String get(Model model) {
+    @RequestMapping(value = {""}, method = RequestMethod.GET)
+    public String loadVideoPage(Model model) {
         return "video";
+    }
+
+    @RequestMapping(value = {"/play"}, method = RequestMethod.POST)
+    public ModelAndView get(HttpServletRequest request, ModelMap map) {
+        long videoId=Integer.parseInt(request.getParameter("videoIdToPlay"));
+        Video video= fileService.findVideoById(videoId);
+        map.put("video",video);
+        return new ModelAndView("video",map);
     }
 
     @RequestMapping(value = {"/delete"})

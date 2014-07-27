@@ -13,6 +13,10 @@
     padding-left:0px;
     padding-right:0px;
 }
+.social-border >a > img{
+    width:100%;
+    height:100%;
+}
 .social-border > img{
     width:100%;
     height:100%;

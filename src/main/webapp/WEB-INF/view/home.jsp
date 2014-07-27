@@ -1,4 +1,6 @@
 <%@ include file="header.jsp" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="pageTitle" scope="request" value="首页"/>
 
 <link rel="stylesheet" href="style/home.css" type="text/css"/>
 <%@ include file="home/carousel.jsp"%>
@@ -59,15 +61,12 @@
         <h2 class="social-header">Arctic Cat Social</h2>
         <hr style="margin:0 0 30px;">
         <div class="row text-center">
-            <div class="col-md-3 social-border">
-                <img src="images/video/car2.jpg" alt="">
-            </div>
-            <div class="col-md-3 social-border">
-                <img src="images/video/car4.jpg" alt="">
-            </div>
-            <div class="col-md-3 social-border">
-                <img src="images/video/car5.jpg" alt="">
-            </div>
+            <c:forEach var="video" items="${videos}" varStatus="row">
+                 <div class="col-md-3 social-border">
+                     <a href="javascript:void(0);" onClick="playVideo('${video.id}');"><img src="${video.image}" alt=""></a>
+                 </div>
+            </c:forEach>
+
             <div class="col-md-3 social-border">
                 <img src="images/video/car7.jpg" alt="">
             </div>
@@ -81,9 +80,22 @@
         <br>
         <hr style="margin:10px 0 30px;">
         <div class="text-center">
-            <a class="btn btn-default btn-lg text-center" role="button">VIEW MORE</a>
+            <a href="video/" class="btn btn-default btn-lg text-center" role="button">VIEW MORE</a>
         </div>
         <br>
     </div>
+
+
+    <script type="text/javascript">
+    function playVideo(VideoId)
+    {
+        document.playVideoById.videoIdToPlay.value = VideoId;
+        document.playVideoById.submit();
+    }
+
+    </script>
+    <form name="playVideoById" method="post" action='video/play' >
+         <input type="hidden" id="videoIdToPlay" name="videoIdToPlay" value="" >
+    </form>
 </div>
 <%@ include file="footer.jsp" %>

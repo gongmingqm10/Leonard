@@ -98,8 +98,8 @@ public class AdminController {
 
     @RequestMapping(value = "/video/upload", method = RequestMethod.POST)
     public ModelAndView uploadFile(@RequestParam MultipartFile file,@RequestParam MultipartFile picture, ModelMap map) {
-        String filename = "uploads/" + file.getOriginalFilename();
-        String picName = "uploads/picture/" + picture.getOriginalFilename();
+        String filename = "src/main/webapp/uploads/" + file.getOriginalFilename();
+        String picName = "src/main/webapp/uploads/picture/" + picture.getOriginalFilename();
         File copy = new File (filename);
         try {
             BufferedOutputStream stream =
@@ -118,8 +118,8 @@ public class AdminController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        map.put("url", filename);
-        map.put("picUrl", picName);
+        map.put("url", "uploads/" + file.getOriginalFilename());
+        map.put("picUrl","uploads/picture/" + picture.getOriginalFilename() );
         map.put("size", file.getSize());
         map.put("message", "文件上传成功");
         return new ModelAndView("video/create", map);

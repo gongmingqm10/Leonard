@@ -17,6 +17,7 @@
 	<mvc:resources mapping="/fonts/**" location="/fonts/" />
 	<mvc:resources mapping="/style/**" location="/style/" />
 	<mvc:resources mapping="/images/**" location="/images/" />
+	<mvc:resources mapping="/uploads/**" location="/uploads/" />
 
     <mvc:annotation-driven />
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">

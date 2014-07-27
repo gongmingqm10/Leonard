@@ -1,6 +1,6 @@
 <%@ include file="../header.jsp" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="pageTitle" scope="request" value="users"/>
+<c:set var="pageTitle" scope="request" value="经销商"/>
 <link rel="stylesheet" href="style/dealer.css" type="text/css"/>
 <script type="text/javascript" src="scripts/dealer.js"></script>
 

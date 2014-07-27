@@ -56,4 +56,19 @@ public class FileServiceImpl implements FileService {
             session.close();
         }
     }
+
+    @Override
+    public Video findVideoById(Long videoId) {
+
+        Video video = new Video();
+        SqlSession session = factory.openSession();
+        try {
+            FileMapper mapper = session.getMapper(FileMapper.class);
+            video =  mapper.findVideoById(videoId);
+
+        } finally {
+            session.close();
+        }
+        return video;
+    }
 }
