@@ -65,9 +65,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           </ul>
         </div>
         <div class="navbar-right" style="margin:12px;">
-           <a href="javascript:void(0);"><span style="font-size: 12px;color:grey;">BECOME A DEALER</span></a>
+           <a href="news/"><span style="font-size: 12px;color:grey;">新闻中心</span></a>
            <span style="font-size: 12px;">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-           <a href="dealer/"><span style="font-size: 12px;color:grey;">FIND A DEALER</span></a>
+           <a href="dealer/"><span style="font-size: 12px;color:grey;">经销商</span></a>
         </div>
     </nav>
     <div class="container nav-container">

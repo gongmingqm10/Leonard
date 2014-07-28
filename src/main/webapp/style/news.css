@@ -1,0 +1,73 @@
+body {
+    background: #000000 url("../images/dealer/body.gif") center top repeat-y;
+    font-size: 12px;
+    color: #464646;
+}
+.pageBox{
+    background: url(../images/dealer/dealer-bg.jpg) center top no-repeat;
+    zoom: 1;
+}
+.lv_treeBox{
+    padding-top: 250px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.lv_tree {
+    background: url(../images/dealer/treeBg.png) right bottom no-repeat;
+    height: 49px;
+    overflow: hidden;
+}
+
+.lv_tree .columnTitle {
+    float: left;
+    position: relative;
+    background: url(../images/dealer/columnTitle.png) left top no-repeat;
+    width: 190px;
+    height: 49px;
+    line-height: 49px;
+    font-size: 30px;
+    color: #fff;
+    text-indent: 20px;
+    font-family: \5FAE\8F6F\96C5\9ED1;
+    font-weight: normal;
+}
+
+.lv_tree_con {
+    background: none;
+    color: #565656;
+    overflow: hidden;
+    padding: 29px 20px 0 0px;
+}
+
+.lv_tree_con a {
+    color: #565656;
+}
+
+.lv_tree_con span {
+    color: #333333;
+}
+
+.pageContent {
+    margin: 0px auto;
+    background: #fff;
+    padding: 20px 0px 40px;
+    min-height: 400px;
+    _height: 400px;
+}
+
+.pageLeft{
+    width:20%;
+}
+
+.pageName {
+    font-size: 30px;
+    font-family: \5FAE\8F6F\96C5\9ED1;
+    height: 60px;
+    line-height: 60px;
+    padding-bottom: 10px;
+}
+.news-list{
+    font: 12px/20px Microsoft yahei;
+    border-bottom: 1px dotted #e4e4e4;
+}
