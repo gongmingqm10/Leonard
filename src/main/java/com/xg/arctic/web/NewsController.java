@@ -19,7 +19,15 @@ public class NewsController {
     public ModelAndView loadNewsPage(ModelMap map) {
 //        List<Dealer> dealers = dealerService.findAllDealer();
 //        map.put("dealers", dealers);
-        return new ModelAndView("news", map);
+        return new ModelAndView("news/newsList", map);
     }
+
+    @RequestMapping("/newsDisplay")
+    public ModelAndView displayNewsPage(ModelMap map) {
+//        List<Dealer> dealers = dealerService.findAllDealer();
+//        map.put("dealers", dealers);
+        return new ModelAndView("news/newsDisplay", map);
+    }
+
 
 }

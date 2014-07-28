@@ -1,4 +1,4 @@
-<%@ include file="header.jsp" %>
+<%@ include file="../header.jsp" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="pageTitle" scope="request" value="新闻中心"/>
 <link rel="stylesheet" href="style/news.css" type="text/css"/>
@@ -26,7 +26,7 @@
                 <img class="media-object" src="images/news/news-head.jpg" alt="...">
               </a>
               <div class="media-body">
-                <h4 class="media-heading">Media heading</h4>
+                <a href="news/newsDisplay"><h4 class="media-heading">Media heading</h4></a>
                 这是一些示例文本。这是一些示例文本。
                       这是一些示例文本。这是一些示例文本。
                       这是一些示例文本。这是一些示例文本。
@@ -67,4 +67,4 @@
 
 
 
-<%@ include file="footer.jsp" %>
+<%@ include file="../footer.jsp" %>

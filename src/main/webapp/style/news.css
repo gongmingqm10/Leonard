@@ -4,7 +4,7 @@ body {
     color: #464646;
 }
 .pageBox{
-    background: url(../images/dealer/dealer-bg.jpg) center top no-repeat;
+    background: url("../images/dealer/dealer-bg.jpg") center top no-repeat;
     zoom: 1;
 }
 .lv_treeBox{
