@@ -3,7 +3,7 @@
  <script type="text/javascript" src="scripts/backend/video.js"></script>
 
 
-            <button type="button" class="btn btn-primary" onclick="location.href='admin/video/create'" >添加视频</button>
+            <a href="admin/video/create"><button type="button" class="btn btn-primary" >添加视频</button></a>
 
             <div class="panel panel-default">
               <div class="panel-heading">

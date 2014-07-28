@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -52,9 +54,14 @@ public class VideoController {
 
     @RequestMapping(value = {"/delete"})
     public ModelAndView deleteById(ModelMap map,HttpServletRequest request){
+
+        HttpSession session = request.getSession();
+        ServletContext application  = session.getServletContext();
+        String serverRealPath = application.getRealPath("/") ;
+
         long id=Integer.parseInt(request.getParameter("id"));
         Video video=fileService.findVideoById(id);
-        Path path= FileSystems.getDefault().getPath("src/main/webapp/",video.getSource());
+        Path path= FileSystems.getDefault().getPath(serverRealPath,video.getSource());
         try {
             Files.deleteIfExists(path);
         } catch (NoSuchFileException x) {
@@ -65,7 +72,7 @@ public class VideoController {
             // File permission problems are caught here.
             System.err.println(x);
         }
-        path= FileSystems.getDefault().getPath("src/main/webapp/",video.getImage());
+        path= FileSystems.getDefault().getPath(serverRealPath,video.getImage());
         try {
             Files.deleteIfExists(path);
         } catch (NoSuchFileException x) {

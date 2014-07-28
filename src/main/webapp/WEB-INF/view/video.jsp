@@ -27,27 +27,9 @@
                 <p>${video.filename}</p>
                 <p><span class="glyphicon glyphicon-play">${video.scan}</span> &nbsp;&nbsp;&nbsp; <span class="glyphicon glyphicon-comment">3</span></p>
             </div>
+
         </c:forEach>
-        <div class="col-md-3 video-item">
-            <img src="images/video/car2.jpg">
-            <p>春风铁马铁马冰河环渤海</p>
-            <p><span class="glyphicon glyphicon-play">200</span> &nbsp;&nbsp;&nbsp; <span class="glyphicon glyphicon-comment">3</span></p>
-        </div>
-        <div class="col-md-3 video-item">
-                <img src="images/video/car4.jpg">
-                <p>俄罗斯美女骑春风650NK</p>
-                <p><span class="glyphicon glyphicon-play">200</span> &nbsp;&nbsp;&nbsp; <span class="glyphicon glyphicon-comment">3</span></p>
-        </div>
-        <div class="col-md-3 video-item">
-                <img src="images/video/car5.jpg">
-                <p>春风650NK、领跑王、捷马赛道风采 老外也爱玩飙车</p>
-                <p><span class="glyphicon glyphicon-play">200</span> &nbsp;&nbsp;&nbsp; <span class="glyphicon glyphicon-comment">3</span></p>
-        </div>
-        <div class="col-md-3 video-item">
-                <img src="images/video/car7.jpg">
-                <p>2013重庆摩博会骑行中国</p>
-                <p><span class="glyphicon glyphicon-play">200</span> &nbsp;&nbsp;&nbsp; <span class="glyphicon glyphicon-comment">3</span></p>
-        </div>
+
 
     </div>
 

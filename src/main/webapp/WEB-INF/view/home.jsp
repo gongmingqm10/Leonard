@@ -69,15 +69,6 @@
                  </div>
             </c:forEach>
 
-            <div class="col-md-3 social-border">
-                <img src="images/video/car7.jpg" alt="">
-            </div>
-            <div class="col-md-3 social-border">
-                <img src="images/video/car8.png" alt="">
-            </div>
-            <div class="col-md-3 social-border">
-                <img src="images/video/car2.jpg" alt="">
-            </div>
         </div>
         <br>
         <hr style="margin:10px 0 30px;">

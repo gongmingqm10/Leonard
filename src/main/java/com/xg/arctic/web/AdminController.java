@@ -17,11 +17,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.URL;
 import java.util.List;
 
 /**
@@ -97,9 +100,19 @@ public class AdminController {
     }
 
     @RequestMapping(value = "/video/upload", method = RequestMethod.POST)
-    public ModelAndView uploadFile(@RequestParam MultipartFile file,@RequestParam MultipartFile picture, ModelMap map) {
-        String filename = "src/main/webapp/uploads/" + file.getOriginalFilename();
-        String picName = "src/main/webapp/uploads/picture/" + picture.getOriginalFilename();
+    public ModelAndView uploadFile(HttpServletRequest request,@RequestParam MultipartFile file,@RequestParam MultipartFile picture, ModelMap map) {
+
+//        String path = request.getContextPath();
+//        String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+//        String rootPath = System.getProperty("usr.dir");
+//        URL rootPath = AdminController.class.getResource("");
+        HttpSession session = request.getSession();
+        ServletContext  application  = session.getServletContext();
+        String serverRealPath = application.getRealPath("/") ;
+
+
+        String filename =serverRealPath+ "/uploads/" + file.getOriginalFilename();
+        String picName =serverRealPath+ "/uploads/picture/" + picture.getOriginalFilename();
         File copy = new File (filename);
         try {
             BufferedOutputStream stream =

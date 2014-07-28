@@ -17,6 +17,7 @@
                              <th class="text-center">销售人员</th>
                              <th class="text-center">销售热线</th>
                              <th class="text-center">地址</th>
+                             <th class="text-center">省份</th>
                              <th class="text-center">操作</th>
                           </tr>
                        </thead>
@@ -28,6 +29,7 @@
                                   <td class="saler"><c:out value="${dealer.salerName}"/></td>
                                   <td class="phone"><c:out value="${dealer.phone}"/></td>
                                   <td class="address"><c:out value="${dealer.address}"/></td>
+                                  <td class="province"><c:out value="${dealer.province}"/></td>
                                   <td class="action">
                                     <button type="button" class="btn btn-default" disabled="disabled" onclick="updateItem(${dealer.id}, this);">保存</button>
                                     <button type="button" class="btn btn-default" onclick="deleteItem(${dealer.id});">删除</button>
