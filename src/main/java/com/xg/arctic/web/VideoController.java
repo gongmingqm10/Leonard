@@ -33,7 +33,7 @@ public class VideoController {
 
     private FileServiceImpl fileService;
     public VideoController() {
-        this.fileService=new FileServiceImpl(MyBatisUtil.getSqlSessionFactory());;
+        this.fileService=new FileServiceImpl(MyBatisUtil.getSqlSessionFactory());
     }
 
     @RequestMapping(value = {""}, method = RequestMethod.GET)

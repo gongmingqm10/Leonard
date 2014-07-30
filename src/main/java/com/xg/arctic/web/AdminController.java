@@ -1,16 +1,20 @@
 package com.xg.arctic.web;
 
 import com.xg.arctic.model.Dealer;
+import com.xg.arctic.model.News;
 import com.xg.arctic.model.Video;
 import com.xg.arctic.service.DealerService;
 import com.xg.arctic.service.FileService;
+import com.xg.arctic.service.NewsService;
 import com.xg.arctic.service.impl.DealerServiceImpl;
 import com.xg.arctic.service.impl.FileServiceImpl;
+import com.xg.arctic.service.impl.NewsServiceImpl;
 import com.xg.arctic.util.MyBatisUtil;
 import org.apache.commons.io.IOUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,6 +29,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -37,10 +42,12 @@ public class AdminController {
 
     private DealerService dealerService;
     private FileService fileService;
+    private NewsService newsService;
 
     public AdminController() {
         dealerService = new DealerServiceImpl(MyBatisUtil.getSqlSessionFactory());
         fileService = new FileServiceImpl(MyBatisUtil.getSqlSessionFactory());
+        newsService = new NewsServiceImpl(MyBatisUtil.getSqlSessionFactory());
     }
 
     @RequestMapping(method = RequestMethod.GET)
@@ -62,8 +69,11 @@ public class AdminController {
     }
 
     @RequestMapping(value = "/news", method = RequestMethod.GET)
-    public String loadNewsPage(Model m) {
-        return "backend/news";
+    public ModelAndView loadNewsPage(ModelMap map) {
+        List<News> newsList = newsService.findAllNews();
+
+        map.put("newsList", newsList);
+        return new ModelAndView("backend/news",map);
     }
 
     @RequestMapping(value = "/product", method = RequestMethod.GET)
@@ -136,5 +146,18 @@ public class AdminController {
         map.put("size", file.getSize());
         map.put("message", "文件上传成功");
         return new ModelAndView("video/create", map);
+    }
+
+    @RequestMapping(value = "/news/create", method = RequestMethod.GET)
+    public String loadNewsCreatePage(Model model) {
+        return "backend/createNews";
+    }
+
+    @RequestMapping(value = "/edit/{newsId}", method = RequestMethod.GET)
+    public ModelAndView editNews(@PathVariable("newsId") String newsId, ModelMap map,HttpServletRequest request) {
+        long id=Integer.parseInt(newsId);
+        News news = newsService.findNewsById(id);
+        map.put("news", news);
+        return new ModelAndView("backend/createNews", map);
     }
 }

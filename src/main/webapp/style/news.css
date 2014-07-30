@@ -68,6 +68,18 @@ body {
     padding-bottom: 10px;
 }
 .news-list{
-    font: 12px/20px Microsoft yahei;
-    border-bottom: 1px dotted #e4e4e4;
+
+}
+.media-body span{
+    font-size:16px;
+}
+.media-body{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    height:70px;
+    font: 2px/20px Microsoft yahei;
+    border-bottom: 3px dotted #e4e4e4;
+}
+.news-content{
+    margin:4px 0;
 }

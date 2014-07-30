@@ -23,16 +23,12 @@
         </div>
         <div class="pageRight col-md-9 newsContext">
              <div class="title">
-                <h3>朱方志书记作客浙江在线“对话红领帮”杭州两新沙龙 </h3>
+                <h3>${news.title} </h3>
                  <span style=" float:none; padding-right:10px">发布人：CFMOTO春风动力</span>
-                 时间：2014-5-13&nbsp;&nbsp;&nbsp;浏览次数：237
+                 时间：${news.date}&nbsp;&nbsp;&nbsp;浏览次数：237
              </div>
-             <p>
-                <span>5月12日，春风动力公司党总支书记朱方志和传化集团党委书记陈捷、吉利集团党委副书记封飞行一起，作客浙江在线“对话红领帮”杭州两新沙龙，参加第一期访谈节目。</span>
-             </p>
-             <p>
-                <span>本期论驾活动的参与者有华东最大俱乐部的普通车迷、专业测评团队的成员，我们还会邀请现场观众谈谈对这款车的第一印象，力争最真实地还原春风650NK的本来面目，给关注此车的车迷一个交代。</span>
-             </p>
+             ${news.content}
+
         </div>
 
     </div>

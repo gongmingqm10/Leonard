@@ -22,43 +22,14 @@
         </div>
         <div class="pageRight col-md-9">
             <div class="media news-list">
-              <a class="pull-left" href="javascript:void(0);">
-                <img class="media-object" src="images/news/news-head.jpg" alt="...">
-              </a>
-              <div class="media-body">
-                <a href="news/newsDisplay"><h4 class="media-heading">Media heading</h4></a>
-                这是一些示例文本。这是一些示例文本。
-                      这是一些示例文本。这是一些示例文本。
-                      这是一些示例文本。这是一些示例文本。
-                      这是一些示例文本。这是一些示例文本。
-                      这是一些示例文本。这是一些示例文本。
-              </div>
-            </div>
-            <div class="media news-list">
-              <a class="pull-left" href="#">
-                <img class="media-object" src="images/news/news-head.jpg" alt="...">
-              </a>
-              <div class="media-body">
-                <h4 class="media-heading">Media heading</h4>
-                这是一些示例文本。这是一些示例文本。
-                      这是一些示例文本。这是一些示例文本。
-                      这是一些示例文本。这是一些示例文本。
-                      这是一些示例文本。这是一些示例文本。
-                      这是一些示例文本。这是一些示例文本。
-              </div>
-            </div>
-            <div class="media news-list">
-              <a class="pull-left" href="#">
-                <img class="media-object" src="images/news/news-head.jpg" alt="...">
-              </a>
-              <div class="media-body">
-                <h4 class="media-heading">Media heading</h4>
-                这是一些示例文本。这是一些示例文本。
-                      这是一些示例文本。这是一些示例文本。
-                      这是一些示例文本。这是一些示例文本。
-                      这是一些示例文本。这是一些示例文本。
-                      这是一些示例文本。这是一些示例文本。
-              </div>
+              <c:forEach var="news" items="${newsList}" varStatus="row">
+                  <div class="media-body">
+                    <span>${news.date}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <a href="news/newsDisplay/${news.id}"><span class="media-heading">${news.title}</span></a>
+
+                    <div class="news-content">${news.content}</div>
+                  </div>
+              </c:forEach>
             </div>
         </div>
 

@@ -40,7 +40,7 @@
               </div>
 
               <button type="submit" class="btn btn-success">保存</button>
-              <button type="button" class="btn btn-default" onclick="location.href='admin/video'">返回</button>
+              <a href="admin/video"><button type="button" class="btn btn-default">返回</button></a>
             </form>
 
 
