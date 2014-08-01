@@ -2,13 +2,16 @@ package com.xg.arctic.web;
 
 import com.xg.arctic.model.Dealer;
 import com.xg.arctic.model.News;
+import com.xg.arctic.model.Product;
 import com.xg.arctic.model.Video;
 import com.xg.arctic.service.DealerService;
 import com.xg.arctic.service.FileService;
 import com.xg.arctic.service.NewsService;
+import com.xg.arctic.service.ProductService;
 import com.xg.arctic.service.impl.DealerServiceImpl;
 import com.xg.arctic.service.impl.FileServiceImpl;
 import com.xg.arctic.service.impl.NewsServiceImpl;
+import com.xg.arctic.service.impl.ProductServiceImpl;
 import com.xg.arctic.util.MyBatisUtil;
 import org.apache.commons.io.IOUtils;
 import org.springframework.stereotype.Controller;
@@ -43,11 +46,13 @@ public class AdminController {
     private DealerService dealerService;
     private FileService fileService;
     private NewsService newsService;
+    private ProductService productService;
 
     public AdminController() {
         dealerService = new DealerServiceImpl(MyBatisUtil.getSqlSessionFactory());
         fileService = new FileServiceImpl(MyBatisUtil.getSqlSessionFactory());
         newsService = new NewsServiceImpl(MyBatisUtil.getSqlSessionFactory());
+        productService = new ProductServiceImpl(MyBatisUtil.getSqlSessionFactory());
     }
 
     @RequestMapping(method = RequestMethod.GET)
@@ -63,10 +68,11 @@ public class AdminController {
         return new ModelAndView("backend/dealer",map);
     }
 
-    @RequestMapping(value = "/activity", method = RequestMethod.GET)
-    public String loadActivityPage(Model m) {
-        return "backend/activity";
-    }
+    @RequestMapping(value = "/productNews", method = RequestMethod.GET)
+    public ModelAndView loadProductNewsPage(ModelMap map) {
+        List<Product> products=productService.findAllProducts();
+        map.put("products",products);
+        return new ModelAndView("backend/productNews",map);    }
 
     @RequestMapping(value = "/news", method = RequestMethod.GET)
     public ModelAndView loadNewsPage(ModelMap map) {
@@ -77,8 +83,10 @@ public class AdminController {
     }
 
     @RequestMapping(value = "/product", method = RequestMethod.GET)
-    public String loadProductPage(Model m) {
-        return "backend/product";
+    public ModelAndView loadProductPage(ModelMap map) {
+        List<Product> products=productService.findAllProducts();
+        map.put("products",products);
+        return new ModelAndView("backend/product",map);
     }
 
     @RequestMapping(value = "/video", method = RequestMethod.GET)
@@ -112,10 +120,6 @@ public class AdminController {
     @RequestMapping(value = "/video/upload", method = RequestMethod.POST)
     public ModelAndView uploadFile(HttpServletRequest request,@RequestParam MultipartFile file,@RequestParam MultipartFile picture, ModelMap map) {
 
-//        String path = request.getContextPath();
-//        String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-//        String rootPath = System.getProperty("usr.dir");
-//        URL rootPath = AdminController.class.getResource("");
         HttpSession session = request.getSession();
         ServletContext  application  = session.getServletContext();
         String serverRealPath = application.getRealPath("/") ;
@@ -153,11 +157,31 @@ public class AdminController {
         return "backend/createNews";
     }
 
-    @RequestMapping(value = "/edit/{newsId}", method = RequestMethod.GET)
+    @RequestMapping(value = "/news/edit/{newsId}", method = RequestMethod.GET)
     public ModelAndView editNews(@PathVariable("newsId") String newsId, ModelMap map,HttpServletRequest request) {
         long id=Integer.parseInt(newsId);
         News news = newsService.findNewsById(id);
         map.put("news", news);
         return new ModelAndView("backend/createNews", map);
+    }
+
+    @RequestMapping(value = "/product/create", method = RequestMethod.GET)
+    public String loadProductCreatePage(Model model) {
+        return "backend/createProduct";
+    }
+
+    @RequestMapping(value = "/product/edit/{productId}", method = RequestMethod.GET)
+    public ModelAndView editProduct(@PathVariable("productId") String newsId, ModelMap map,HttpServletRequest request) {
+        long id=Integer.parseInt(newsId);
+        Product product = productService.findProductById(id);
+        map.put("product", product);
+        return new ModelAndView("backend/createProduct", map);
+    }
+    @RequestMapping(value = "/product/editNews/{productId}", method = RequestMethod.GET)
+    public ModelAndView editProductNews(@PathVariable("productId") String newsId, ModelMap map,HttpServletRequest request) {
+        long id=Integer.parseInt(newsId);
+        Product product = productService.findProductById(id);
+        map.put("product", product);
+        return new ModelAndView("backend/editProductNews", map);
     }
 }

@@ -34,9 +34,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class="left-content">
             <ul id="menu-ul" class="nav nav-pills nav-stacked" role="tablist">
                  <li role="presentation" class="dealer"><a href="admin/dealer" onClick="switchItem(this)">经销商管理</a></li>
-                 <li role="presentation" class="activity"><a href="admin/activity" onClick="switchItem(this)">俱乐部活动</a></li>
                  <li role="presentation" class="news"><a href="admin/news" onClick="switchItem(this)">新闻管理</a></li>
                  <li role="presentation" class="product"><a href="admin/product" onClick="switchItem(this)">产品管理</a></li>
+                 <li role="presentation" class="productNews"><a href="admin/productNews" onClick="switchItem(this)">产品新闻</a></li>
                  <li role="presentation" class="video"><a href="admin/video" onClick="switchItem(this)">视频管理</a></li>
             </ul>
         </div>

@@ -1,0 +1,32 @@
+.product-table tr td.number{
+    width:8%;
+    vertical-align: middle;
+}
+.product-table tr td.productName{
+    width:30%;
+    max-width:200px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.product-table tr td.type{
+    width:10%;
+    vertical-align: middle;
+    text-align:center;
+}
+.product-table tr td.subType{
+    width:10%;
+    text-align: center;
+    vertical-align: middle;
+}
+.product-table tr td.product-info{
+    width:30%;
+    text-align: center;
+    vertical-align: middle;
+}
+.product-table tr td.action{
+    width:12%;
+    text-align: center;
+    vertical-align: middle;
+}

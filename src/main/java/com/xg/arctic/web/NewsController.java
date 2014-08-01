@@ -70,8 +70,6 @@ public class NewsController {
     public ModelAndView deleteNews(ModelMap map,HttpServletRequest request) {
         long id=Integer.parseInt(request.getParameter("id"));
         newsService.deleteNewsById(id);
-        List<News> newsList = newsService.findAllNews();
-        map.put("newsList", newsList);
         return new ModelAndView("redirect:/admin/news", map);
     }
 

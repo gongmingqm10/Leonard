@@ -29,7 +29,7 @@
                                   <td class="date"><c:out value="${news.date}"/></td>
                                   <td class="scan"><c:out value="${news.scan}"/></td>
                                   <td class="action">
-                                    <a href="admin/edit/${news.id}"><button type="button" class="btn btn-default" >编辑</button></a>
+                                    <a href="admin/news/edit/${news.id}"><button type="button" class="btn btn-default" >编辑</button></a>
                                     <button type="button" class="btn btn-default" onclick="deleteNews(${news.id});">删除</button>
                                   </td>
                               </tr>
