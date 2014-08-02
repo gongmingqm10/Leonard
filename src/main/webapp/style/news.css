@@ -89,7 +89,6 @@ body {
 .newsContext{
    overflow: hidden;
    text-overflow:ellipsis;
-   white-space: nowrap;
 }
 .title span{
     float:none;

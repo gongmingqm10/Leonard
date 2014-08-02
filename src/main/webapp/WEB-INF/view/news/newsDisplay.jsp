@@ -11,7 +11,7 @@
         <div class="lv_tree">
             <p class="columnTitle">新闻中心</p>
             <div class="lv_tree_con">
-                 当前位置：<a href="javascript:void(0);">首页</a>&nbsp;-&nbsp;<a href="javascript:void(0);">企业新闻</a>&nbsp;-&nbsp;<span>经销商网络</span>
+                 当前位置：<a href="javascript:void(0);">首页</a>&nbsp;-&nbsp;<a href="javascript:void(0);">企业新闻</a>
             </div>
          </div>
     </div>
