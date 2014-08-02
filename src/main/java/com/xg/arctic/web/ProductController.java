@@ -118,15 +118,16 @@ public class ProductController {
     @RequestMapping(value = "/product/{productType}", method = RequestMethod.GET)
     public ModelAndView loadProductPage(@PathVariable("productType") String type, ModelMap map,HttpServletRequest request) {
         List<Product> productsOfType=productService.findProductsByType(type);
-        Vector<String> productType = new Vector<String>();
+        Vector<String> productSubType = new Vector<String>();
         for(int i=0;i<productsOfType.size();i++){
-             if(productType.indexOf(productsOfType.get(i).getSubType()) == -1 ){
-                 productType.add(productsOfType.get(i).getSubType()) ;
+             if(productSubType.indexOf(productsOfType.get(i).getSubType()) == -1 ){
+                 productSubType.add(productsOfType.get(i).getSubType()) ;
              }
         }
         List<Product> products = productService.findAllProducts();
+        map.put("type",type);
         map.put("products",products);
-        map.put("productType",productType.toArray());
+        map.put("productSubType",productSubType.toArray());
         map.put("productsOfType",productsOfType);
         return new ModelAndView("product/product", map);
     }

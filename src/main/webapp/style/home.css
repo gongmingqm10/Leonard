@@ -40,3 +40,9 @@ hr {
 #panel-find{
     margin-top:20px;
 }
+.carousel-caption {
+    text-align:left;
+}
+.carousel-caption a {
+    color:#ffffff;
+}

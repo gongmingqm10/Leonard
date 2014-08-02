@@ -73,7 +73,7 @@
         <br>
         <hr style="margin:10px 0 30px;">
         <div class="text-center">
-            <a href="video/" class="btn btn-default btn-lg text-center" role="button">更多信息</a>
+            <a href="video" class="btn btn-default btn-lg text-center" role="button">更多信息</a>
         </div>
         <br>
     </div>

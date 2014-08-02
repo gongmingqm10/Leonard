@@ -60,3 +60,28 @@ LOCK TABLES `files` WRITE;
 /*!40000 ALTER TABLE `files` DISABLE KEYS */;
 /*!40000 ALTER TABLE `files` ENABLE KEYS */;
 UNLOCK TABLES;
+
+DROP TABLE IF EXISTS `product`;
+CREATE TABLE `product` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `number` varchar(20) NOT NULL,
+  `productName` varchar(50) DEFAULT NULL,
+  `type` varchar(20) DEFAULT NULL,
+  `subType` varchar(50) DEFAULT NULL,
+  `productInfo` varchar(100) DEFAULT NULL,
+  `productNews` text,
+  `images` varchar(255) DEFAULT NULL,
+  `colors` varchar(50) DEFAULT NULL,
+  `colorName` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `news`;
+CREATE TABLE `news` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `title` varchar(200) NOT NULL,
+  `scan` int(11) DEFAULT '0',
+  `content` longtext,
+  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;

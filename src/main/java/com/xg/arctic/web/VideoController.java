@@ -43,9 +43,13 @@ public class VideoController {
     }
 
     @RequestMapping(value = {""}, method = RequestMethod.GET)
-    public String loadVideoPage(Model model) {
-
-        return "video";
+    public ModelAndView loadVideoPage(ModelMap map) {
+        List<Video> videos= fileService.findAllVideos();
+        map.put("video", videos.get(0));
+        map.put("videos", videos);
+        List<Product> products = productService.findAllProducts();
+        map.put("products",products);
+        return new ModelAndView("video/video", map);
     }
 
     @RequestMapping(value = {"/play/{videoId}"}, method = RequestMethod.GET)
@@ -57,7 +61,7 @@ public class VideoController {
         map.put("videos", videos);
         List<Product> products = productService.findAllProducts();
         map.put("products",products);
-        return new ModelAndView("video", map);
+        return new ModelAndView("video/video", map);
     }
 
 

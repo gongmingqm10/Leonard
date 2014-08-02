@@ -1,4 +1,4 @@
-<%@ include file="header.jsp" %>
+<%@ include file="../header.jsp" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="pageTitle" scope="request" value="俱乐部活动"/>
 <link rel="stylesheet" href="style/home.css" type="text/css"/>
@@ -15,10 +15,7 @@
     </video>
 
     <ul class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active"><a href="javascript:void(0);">摩托车</a></li>
-      <li role="presentation"><a href="javascript:void(0);">全地形车</a></li>
-      <li role="presentation"><a href="javascript:void(0);">游艇</a></li>
-      <li role="presentation"><a href="javascript:void(0);">综合</a></li>
+      <li role="presentation" class="active"><a href="javascript:void(0);">综合</a></li>
     </ul>
     <div class="video-container">
         <c:forEach var="video" items="${videos}" varStatus="row">
@@ -33,18 +30,7 @@
 
     </div>
 
-    <div class="text-center pagination-container">
-        <ul class="pagination">
-          <li><a href="#">&laquo;</a></li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#">&raquo;</a></li>
-        </ul>
 
-    </div>
 
 </div>
-<%@ include file="footer.jsp"%>
+<%@ include file="../footer.jsp"%>

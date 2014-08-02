@@ -10,12 +10,12 @@
         <div class="lv_tree">
             <p class="columnTitle">产品展示</p>
             <div class="lv_tree_con">
-                 当前位置：<a href="">首页</a>&nbsp;-&nbsp;产品展示
+                 当前位置：<a href="">首页</a>&nbsp;-&nbsp;产品展示&nbsp;-&nbsp;${type}
             </div>
          </div>
     </div>
     <div class="container product-container">
-        <c:forEach var="subType" items="${productType}" varStatus="row">
+        <c:forEach var="subType" items="${productSubType}" varStatus="row">
         <div>
             <p class="col-md-12 product-type-p">${subType}</p>
             <c:forEach var="product" items="${productsOfType}" varStatus="row">

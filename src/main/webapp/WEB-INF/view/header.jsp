@@ -6,6 +6,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<c:set var="pageTitle" scope="request" value="北极动力"/>
 
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
@@ -88,17 +89,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </c:if>
                 </c:forEach>
 
+                <a href="product/product/把式全地车型">
                 <div class="col-md-12 row-border text-right">
-                    <a href="product/product/把式全地车型"><span>全部信息>>&nbsp;&nbsp;</span></a>
+                    <span>全部信息>>&nbsp;&nbsp;</span>
                 </div>
+                </a>
             </div>
         </div>
         <div class="nav-content" id="nav-content2">
             <div class="row text-center nav-row">
-                <c:forEach var="product" items="${products}" varStatus="row">
+                <c:forEach var="product" items="${products}" varStatus="loop">
                 <c:if test = "${product.type == '方向盘式全地车型'}">
                     <a href="product/product/方向盘式全地车型">
-                    <div class="col-md-4 row-border product-box">
+                    <div class="col-md-4 row-border product-box p${loop.index}">
                         <img class="product-img" src="${fn:split(product.images, ',')[0]}" alt="">
                         <h4>${product.productName}</h4>
                         <h5>${product.productInfo}</h5>
@@ -107,9 +110,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </c:if>
                 </c:forEach>
 
+                <a href="product/product/方向盘式全地车型">
                 <div class="col-md-12 row-border text-right">
-                    <a href="product/product/方向盘式全地车型"><span>全部信息>>&nbsp;&nbsp;</span></a>
+                    <span>全部信息>>&nbsp;&nbsp;</span>
                 </div>
+                </a>
             </div>
         </div>
         <div class="nav-content" id="nav-content3">
@@ -125,9 +130,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </a>
                 </c:if>
                 </c:forEach>
+                <a href="product/product/雪地车">
                 <div class="col-md-12 row-border text-right">
-                    <a href="product/product/雪地车"><span>全部信息>>&nbsp;&nbsp;</span></a>
+                    <span>全部信息>>&nbsp;&nbsp;</span>
                 </div>
+                </a>
             </div>
         </div>
         <div class="nav-content" id="nav-content4">
@@ -143,9 +150,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </a>
                 </c:if>
                 </c:forEach>
+                <a href="product/product/配件饰品">
                 <div class="col-md-12 row-border text-right">
-                    <a href="product/product/配件饰品"><span>全部信息>>&nbsp;&nbsp;</span></a>
+                    <span>全部信息>>&nbsp;&nbsp;</span>
                 </div>
+                </a>
 
             </div>
         </div>
