@@ -114,7 +114,7 @@ public class AdminController {
         if (filesize != null && !filesize.equals("")) video.setFilesize(Integer.parseInt(filesize));
         fileService.createVideo(video);
         map.put("message", "视频保存成功");
-        return new ModelAndView("video/create", map);
+        return new ModelAndView("backend/video", map);
     }
 
     @RequestMapping(value = "/video/upload", method = RequestMethod.POST)

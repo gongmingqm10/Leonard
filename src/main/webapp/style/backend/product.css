@@ -1,9 +1,9 @@
 .product-table tr td.number{
-    width:8%;
+    width:5%;
     vertical-align: middle;
 }
 .product-table tr td.productName{
-    width:30%;
+    width:25%;
     max-width:200px;
     vertical-align: middle;
     overflow: hidden;
@@ -11,12 +11,12 @@
     white-space: nowrap;
 }
 .product-table tr td.type{
-    width:10%;
+    width:12%;
     vertical-align: middle;
     text-align:center;
 }
 .product-table tr td.subType{
-    width:10%;
+    width:13%;
     text-align: center;
     vertical-align: middle;
 }
@@ -26,7 +26,7 @@
     vertical-align: middle;
 }
 .product-table tr td.action{
-    width:12%;
+    width:15%;
     text-align: center;
     vertical-align: middle;
 }

@@ -17,7 +17,7 @@
                              <th class="text-center">编号</th>
                              <th class="text-center">产品名</th>
                              <th class="text-center">类型</th>
-                             <th class="text- center">子类型</th>
+                             <th class="text-center">子类型</th>
                              <th class="text-center">产品信息</th>
                              <th class="text-center">操作</th>
                           </tr>

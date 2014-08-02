@@ -35,7 +35,7 @@ body {
     border-top: 1px solid #d1d1d1;
     z-index: 100;
     background: url(../images/header/nav-border.png) no-repeat 0 bottom;
-    padding-bottom: 7px;
+    padding-bottom: 6px;
 }
 
 .container {

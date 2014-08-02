@@ -11,6 +11,10 @@
     width:50%;
     vertical-align: middle;
     text-align:center;
+    max-width:200px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
 }
 
 .product-table tr td.action{

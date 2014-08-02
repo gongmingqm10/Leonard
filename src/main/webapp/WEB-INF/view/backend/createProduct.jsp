@@ -191,8 +191,6 @@
     </form>
 
 </div>
-   <h3>${number}${productName}${type}${subType}${productInfo}${colors}${colorName}${url}</h3>
-
 
 
 
