@@ -96,4 +96,17 @@ public class ProductServiceImpl implements ProductService{
             session.close();
         }
     }
+
+    @Override
+    public List<Product> findProductsByType(String type) {
+        List<Product> products = new ArrayList<Product>();
+        SqlSession session = factory.openSession();
+        try{
+            ProductMapper productMapper = session.getMapper(ProductMapper.class);
+            products = productMapper.findProductsByType(type);
+        } finally {
+            session.close();
+        }
+        return products;
+    }
 }

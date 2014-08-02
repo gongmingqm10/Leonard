@@ -24,4 +24,5 @@ public interface ProductService {
 
     void updateProduct(String id, String number, String productName, String type, String subType, String productInfo, String colors, String colorName, String url);
 
+    List<Product> findProductsByType(String type);
 }

@@ -49,4 +49,10 @@ public interface ProductMapper {
                     " WHERE id= #{param1}"
     )
     void updateProduct(String id, String number, String productName, String type, String subType, String productInfo, String colors, String colorName, String images);
+
+    @Select(
+            "SELECT id, number, productName, type, subType, productInfo, productNews, colors, colorName, images FROM product" +
+                    " WHERE type=#{type}"
+    )
+    List<Product> findProductsByType(String type);
 }

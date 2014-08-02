@@ -69,7 +69,7 @@
 
         <div id="editor">
           <c:set var="url" value="${product.images}" />
-          <div>&nbsp; &nbsp;${product.productName}</div><div style="text-align: center;"><img src="${fn:split(url, ',')[0]}" style="color: inherit;"></div>
+          <div><p id="product-title-p">${product.productName}</p></div><div style="text-align: center;"><img id="product-img" src="${fn:split(url, ',')[0]}" style="color: inherit;"></div>
         </div>
 
         <button class="btn btn-primary " onClick="saveProduct(${product.id})">保存</button>

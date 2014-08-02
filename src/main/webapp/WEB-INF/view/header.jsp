@@ -4,6 +4,9 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
@@ -25,11 +28,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div class="header-container">
     <div class="head-btn">
         <img src="http://intl.arcticcat.com/img/language/intl.png" alt="">&nbsp;
-        <a href="javascript:void(0);">English</a>
+        <span><a href="javascript:void(0);">English</a></span>
         <span>|</span>
-        <a href="http://intl.arcticcat.com/customer_care"><span>Customer Care</span></a>
+        <a href="http://intl.arcticcat.com/customer_care"><span>用户中心</span></a>
         <span>|</span>
-        <a href="login/"><span>Login</span></a>
+        <a href="login/"><span>登录</span></a>
     </div>
     <nav class="navbar navbar-inverse header-nav" role="navigation">
         <div class="navbar-header">
@@ -39,26 +42,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <ul class="nav navbar-nav" >
              <li class="active">
                 <a href="javascript:void(0);" onclick="showPanel(this);" target-content="#nav-content1">
-                    SLEDS&nbsp;&nbsp;&nbsp;
+                    把式全地车型&nbsp;&nbsp;&nbsp;
                     <i class="glyphicon glyphicon-chevron-down"></i>
                 </a>
              </li>
              <li>
                 <a href="javascript:void(0);" onclick="showPanel(this);"  target-content="#nav-content2">
-                    ATVS&nbsp;&nbsp;&nbsp;
+                    方向盘式全地车型&nbsp;&nbsp;&nbsp;
                     <i class="glyphicon glyphicon-chevron-down"></i>
                 </a>
              </li>
              <li>
                 <a  href="javascript:void(0);" onclick="showPanel(this);"  target-content="#nav-content3">
-                    SIDE BY SIDES&nbsp;&nbsp;&nbsp;
+                    雪地车&nbsp;&nbsp;&nbsp;
                     <i class="glyphicon glyphicon-chevron-down"></i>
                 </a>
 
              </li>
              <li>
                 <a href="javascript:void(0);" onclick="showPanel(this);"   target-content="#nav-content4">
-                    GEVR&nbsp;&nbsp;&nbsp;
+                    配件饰品&nbsp;&nbsp;&nbsp;
                     <i class="glyphicon glyphicon-chevron-down"></i>
                 </a>
              </li>
@@ -73,282 +76,77 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div class="container nav-container">
         <div class="nav-content" id="nav-content1">
             <div class="row text-center nav-row">
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd1.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
-                </div>
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd2.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
-                </div>
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd3.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
-                </div>
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd4.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
-                </div>
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd5.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
-                </div>
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd6.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
-                </div>
-                <div class="col-md-4 row-border">
-                    <span>Full Lineup</span>
-                </div>
-                <div class="col-md-8 row-border">
-                    <span>Past Models: 2011 2012 2013 2014</span>
+                <c:forEach var="product" items="${products}" varStatus="row">
+                <c:if test = "${product.type == '把式全地车型'}">
+                    <a href="product/product/把式全地车型">
+                    <div class="col-md-4 row-border product-box">
+                        <img class="product-img" src="${fn:split(product.images, ',')[0]}" alt="">
+                        <h4>${product.productName}</h4>
+                        <h5>${product.productInfo}</h5>
+                    </div>
+                    </a>
+                </c:if>
+                </c:forEach>
+
+                <div class="col-md-12 row-border text-right">
+                    <a href="product/product/把式全地车型"><span>全部信息>>&nbsp;&nbsp;</span></a>
                 </div>
             </div>
         </div>
         <div class="nav-content" id="nav-content2">
             <div class="row text-center nav-row">
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd1.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
-                </div>
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd2.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
-                </div>
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd3.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
-                </div>
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd4.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
-                </div>
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd5.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
-                </div>
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd6.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
-                </div>
-                <div class="col-md-4 row-border">
-                    <span>Full Lineup</span>
-                </div>
-                <div class="col-md-8 row-border">
-                    <span>Past Models: 2011 2012 2013 2014</span>
+                <c:forEach var="product" items="${products}" varStatus="row">
+                <c:if test = "${product.type == '方向盘式全地车型'}">
+                    <a href="product/product/方向盘式全地车型">
+                    <div class="col-md-4 row-border product-box">
+                        <img class="product-img" src="${fn:split(product.images, ',')[0]}" alt="">
+                        <h4>${product.productName}</h4>
+                        <h5>${product.productInfo}</h5>
+                    </div>
+                    </a>
+                </c:if>
+                </c:forEach>
+
+                <div class="col-md-12 row-border text-right">
+                    <a href="product/product/方向盘式全地车型"><span>全部信息>>&nbsp;&nbsp;</span></a>
                 </div>
             </div>
         </div>
         <div class="nav-content" id="nav-content3">
             <div class="row text-center nav-row">
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd1.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
-                </div>
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd2.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
-                </div>
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd3.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
-                </div>
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd4.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
-                </div>
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd5.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
-                </div>
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd6.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
-                </div>
-                <div class="col-md-4 row-border">
-                    <span>Full Lineup</span>
-                </div>
-                <div class="col-md-8 row-border">
-                    <span>Past Models: 2011 2012 2013 2014</span>
+                <c:forEach var="product" items="${products}" varStatus="row">
+                <c:if test = "${product.type == '雪地车'}">
+                    <a href="product/product/雪地车">
+                    <div class="col-md-4 row-border product-box">
+                        <img class="product-img" src="${fn:split(product.images, ',')[0]}" alt="">
+                        <h4>${product.productName}</h4>
+                        <h5>${product.productInfo}</h5>
+                    </div>
+                    </a>
+                </c:if>
+                </c:forEach>
+                <div class="col-md-12 row-border text-right">
+                    <a href="product/product/雪地车"><span>全部信息>>&nbsp;&nbsp;</span></a>
                 </div>
             </div>
         </div>
         <div class="nav-content" id="nav-content4">
             <div class="row text-center nav-row">
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd1.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
+                <c:forEach var="product" items="${products}" varStatus="row">
+                <c:if test = "${product.type == '配件饰品'}">
+                    <a href="product/product/配件饰品">
+                    <div class="col-md-4 row-border product-box">
+                        <img class="product-img" src="${fn:split(product.images, ',')[0]}" alt="">
+                        <h4>${product.productName}</h4>
+                        <h5>${product.productInfo}</h5>
+                    </div>
+                    </a>
+                </c:if>
+                </c:forEach>
+                <div class="col-md-12 row-border text-right">
+                    <a href="product/product/配件饰品"><span>全部信息>>&nbsp;&nbsp;</span></a>
                 </div>
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd2.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
-                </div>
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd3.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
-                </div>
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd4.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
-                </div>
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd5.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
-                </div>
-                <div class="col-md-4 row-border">
-                    <img src="images/header/dd6.png" alt="">
-                    <h4>RE CREATION</h4>
-                    <h5>BIG BORE</h5>
-                    <P>
-                        4x4, Big Fun, Work
-                        <BR>
-                        Ages 16+
-                    </P>
-                </div>
-                <div class="col-md-4 row-border">
-                    <span>Full Lineup</span>
-                </div>
-                <div class="col-md-8 row-border">
-                    <span>Past Models: 2011 2012 2013 2014</span>
-                </div>
+
             </div>
         </div>
     </div>

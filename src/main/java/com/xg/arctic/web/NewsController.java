@@ -1,7 +1,9 @@
 package com.xg.arctic.web;
 
 import com.xg.arctic.model.News;
+import com.xg.arctic.model.Product;
 import com.xg.arctic.service.impl.NewsServiceImpl;
+import com.xg.arctic.service.impl.ProductServiceImpl;
 import com.xg.arctic.util.MyBatisUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -25,9 +27,12 @@ import java.util.List;
 public class NewsController {
 
     private NewsServiceImpl newsService;
+    private ProductServiceImpl productService;
+
 
     public NewsController() {
         this.newsService = new NewsServiceImpl(MyBatisUtil.getSqlSessionFactory());
+        this.productService = new ProductServiceImpl(MyBatisUtil.getSqlSessionFactory());;
     }
 
     @RequestMapping(value = "", method = RequestMethod.GET)
@@ -36,6 +41,9 @@ public class NewsController {
         for(int i=0;i< newsList.size();i++){
             newsList.get(i).setDate(newsList.get(i).getDate().substring(0,10));
         }
+
+        List<Product> products = productService.findAllProducts();
+        map.put("products",products);
         map.put("newsList", newsList);
         return new ModelAndView("news/newsList", map);
     }
@@ -45,6 +53,9 @@ public class NewsController {
         long id=Integer.parseInt(newsId);
         News news = newsService.findNewsById(id);
         news.setDate(news.getDate().substring(0,10));
+
+        List<Product> products = productService.findAllProducts();
+        map.put("products",products);
         map.put("news", news);
         return new ModelAndView("news/newsDisplay", map);
     }

@@ -1,5 +1,6 @@
 package com.xg.arctic.web;
 
+import com.xg.arctic.model.Product;
 import com.xg.arctic.service.impl.ProductServiceImpl;
 import com.xg.arctic.util.MyBatisUtil;
 import org.apache.commons.fileupload.FileUpload;
@@ -8,10 +9,7 @@ import org.apache.commons.logging.Log;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
@@ -23,8 +21,7 @@ import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Iterator;
-import java.util.UUID;
+import java.util.*;
 
 /**
  * User: gongming
@@ -116,5 +113,29 @@ public class ProductController {
         String describe=request.getParameter("content");
         productService.updateDescribeById(id,describe);
         return new ModelAndView("redirect:/admin/productNews", map);
+    }
+
+    @RequestMapping(value = "/product/{productType}", method = RequestMethod.GET)
+    public ModelAndView loadProductPage(@PathVariable("productType") String type, ModelMap map,HttpServletRequest request) {
+        List<Product> productsOfType=productService.findProductsByType(type);
+        Vector<String> productType = new Vector<String>();
+        for(int i=0;i<productsOfType.size();i++){
+             if(productType.indexOf(productsOfType.get(i).getSubType()) == -1 ){
+                 productType.add(productsOfType.get(i).getSubType()) ;
+             }
+        }
+        List<Product> products = productService.findAllProducts();
+        map.put("products",products);
+        map.put("productType",productType.toArray());
+        map.put("productsOfType",productsOfType);
+        return new ModelAndView("product/product", map);
+    }
+    @RequestMapping(value = "/productNews/{productId}", method = RequestMethod.GET)
+    public ModelAndView loadProductNewsPage(@PathVariable("productId") String productId, ModelMap map,HttpServletRequest request) {
+        Product product=productService.findProductById(Integer.parseInt(productId));
+        List<Product> products = productService.findAllProducts();
+        map.put("products",products);
+        map.put("product",product);
+        return new ModelAndView("product/productNews", map);
     }
 }

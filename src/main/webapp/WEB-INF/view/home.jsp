@@ -9,16 +9,16 @@
 <div class="container" >
     <div class="panel panel-default text-center" id="panel-find">
       <div class="panel-heading">
-        <h3 class="panel-title">Find a Dealer</h3>
+        <h3 class="panel-title">寻找经销商</h3>
       </div>
       <div class="panel-body">
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" role="button">FIND A DEALER</a></p>
+        <p>为迎合广大爱好者以及发烧友。北极猫特开设新的活动项目。请大家敬请期待。关注北极猫官方网站014年6月6日，经过近半个月数千公里的大漠征途，第十届中国环塔（国际）拉力赛在哈密落下帷幕。漫长的赛道，激烈的角逐，一半以上的惨烈淘汰，都在展示着环塔的伟大！</p>
+        <p><a class="btn btn-primary btn-lg" role="button">寻找经销商</a></p>
       </div>
     </div>
     <nav class="navbar navbar-inverse" role="navigation">
         <div class="navbar-header" style="margin:9px;">
-          <h5 style="color:white;">&nbsp;&nbsp;&nbsp;VIEW CURRENT & PAST MODELS</h5>
+          <h5 style="color:white;">&nbsp;&nbsp;&nbsp;查看当前和过去车型</h5>
         </div>
         <div class="navbar-collapse collapse">
           <form class="navbar-form navbar-right" role="form">
@@ -41,7 +41,7 @@
                 SXS&nbsp&nbsp;</i>
             </label>
             <div class="btn-group ">
-              <button class="btn btn-default " >Select Year</button>
+              <button class="btn btn-default " > 选择年份</button>
               <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                 <span class="caret"></span>
               </button>
@@ -54,13 +54,13 @@
                </ul>
             </div>
             &nbsp;&nbsp;&nbsp;
-            <button type="submit" class="btn btn-success ">&nbsp;View Models&nbsp;</button>
+            <button type="submit" class="btn btn-success ">&nbsp;查看车型&nbsp;</button>
             <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
           </form>
         </div>
     </nav>
     <div id="content">
-        <h2 class="social-header">Arctic Cat Social</h2>
+        <h2 class="social-header">俱乐部活动</h2>
         <hr style="margin:0 0 30px;">
         <div class="row text-center">
             <c:forEach var="video" items="${videos}" varStatus="row">
@@ -73,7 +73,7 @@
         <br>
         <hr style="margin:10px 0 30px;">
         <div class="text-center">
-            <a href="video/" class="btn btn-default btn-lg text-center" role="button">VIEW MORE</a>
+            <a href="video/" class="btn btn-default btn-lg text-center" role="button">更多信息</a>
         </div>
         <br>
     </div>

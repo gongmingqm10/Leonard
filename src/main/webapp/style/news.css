@@ -79,7 +79,19 @@ body {
     height:70px;
     font: 2px/20px Microsoft yahei;
     border-bottom: 3px dotted #e4e4e4;
+    margin: 0px 0px 5px 0px;
+
 }
 .news-content{
-    margin:4px 0;
+    font-size:14px;
+    color:#858585;
+}
+.newsContext{
+   overflow: hidden;
+   text-overflow:ellipsis;
+   white-space: nowrap;
+}
+.title span{
+    float:none;
+    padding-right:10px
 }

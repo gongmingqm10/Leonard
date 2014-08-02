@@ -1,7 +1,9 @@
 package com.xg.arctic.web;
 
 import com.xg.arctic.model.Dealer;
+import com.xg.arctic.model.Product;
 import com.xg.arctic.service.impl.DealerServiceImpl;
+import com.xg.arctic.service.impl.ProductServiceImpl;
 import com.xg.arctic.util.MyBatisUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,14 +26,18 @@ import java.util.List;
 public class DealerController {
 
     private DealerServiceImpl dealerService;
+    private ProductServiceImpl productService;
 
     public DealerController() {
         this.dealerService = new DealerServiceImpl(MyBatisUtil.getSqlSessionFactory());;
+        this.productService = new ProductServiceImpl(MyBatisUtil.getSqlSessionFactory());;
     }
 
     @RequestMapping("/")
     public ModelAndView loadDealerPage(ModelMap map) {
         List<Dealer> dealers = dealerService.findAllDealer();
+        List<Product> products = productService.findAllProducts();
+        map.put("products",products);
         map.put("dealers", dealers);
         return new ModelAndView("dealer/dealer", map);
     }

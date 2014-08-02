@@ -1,0 +1,26 @@
+.color-box ul{
+    padding-left: 0px;
+}
+.color-box li{
+    float: left;
+    height: 29px;
+    width: 44px;
+    display: inline;
+    margin: 10px 5px;
+    border-bottom: dashed 1px #999;
+
+}
+.color-box li a {
+    float: left;
+    text-decoration: none;
+    height: 25px;
+    width: 40px;
+    border: 1px solid #666;
+}
+.color-box li a:hover {
+    border: 1px solid #F00;
+}
+.selectTag{
+    background-position: left top;
+    border: 2px solid #F00 !important;
+}

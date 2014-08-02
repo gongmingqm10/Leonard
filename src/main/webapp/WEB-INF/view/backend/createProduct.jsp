@@ -1,6 +1,5 @@
 <%@ include file="../backend/admin.jsp" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions"
-   prefix="fn" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
  <link rel="stylesheet" href="style/backend/createProduct.css" type="text/css"/>
  <script type="text/javascript" src="scripts/backend/createProduct.js"></script>

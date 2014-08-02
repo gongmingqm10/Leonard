@@ -1,7 +1,9 @@
 package com.xg.arctic.web;
 
+import com.xg.arctic.model.Product;
 import com.xg.arctic.model.Video;
 import com.xg.arctic.service.impl.FileServiceImpl;
+import com.xg.arctic.service.impl.ProductServiceImpl;
 import com.xg.arctic.util.MyBatisUtil;
 import org.apache.commons.io.IOUtils;
 import org.springframework.stereotype.Controller;
@@ -32,12 +34,17 @@ import java.util.List;
 public class VideoController {
 
     private FileServiceImpl fileService;
+    private ProductServiceImpl productService;
+
     public VideoController() {
         this.fileService=new FileServiceImpl(MyBatisUtil.getSqlSessionFactory());
+        this.productService = new ProductServiceImpl(MyBatisUtil.getSqlSessionFactory());;
+
     }
 
     @RequestMapping(value = {""}, method = RequestMethod.GET)
     public String loadVideoPage(Model model) {
+
         return "video";
     }
 
@@ -48,6 +55,8 @@ public class VideoController {
         map.put("video", video);
         List<Video> videos= fileService.findAllVideos();
         map.put("videos", videos);
+        List<Product> products = productService.findAllProducts();
+        map.put("products",products);
         return new ModelAndView("video", map);
     }
 
