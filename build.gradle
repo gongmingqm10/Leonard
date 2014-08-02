@@ -3,9 +3,8 @@ apply plugin: 'war'
 apply plugin: 'jetty'
 
 
-tasks.withType(Compile) {
-    options.encoding = "UTF-8"
-}
+compileJava.options.encoding = 'UTF-8'
+
 repositories {
     mavenCentral()
 }
