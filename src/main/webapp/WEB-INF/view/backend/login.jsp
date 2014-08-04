@@ -34,12 +34,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                   </c:forEach>
               </div>
               <div class="form-group login-content">
-                <label for="exampleInputEmail1">User Name</label>
-                <input class="form-control" id="exampleInputEmail1" placeholder="Enter User Name" name="userName">
+                <label for="exampleInputEmail1"><h4>用户名</h4></label>
+                <input class="form-control" id="exampleInputEmail1" placeholder="请输入用户名" name="userName">
               </div>
               <div class="form-group login-content">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+                <label for="exampleInputPassword1"><h4>密码</h4></label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="请输入密码" name="password">
               </div>
               <div class="text-center">
                 <button type="submit" class="btn btn-default">Submit</button>

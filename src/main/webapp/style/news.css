@@ -76,10 +76,9 @@ body {
 .media-body{
     overflow: hidden;
     text-overflow:ellipsis;
-    height:70px;
     font: 2px/20px Microsoft yahei;
-    border-bottom: 3px dotted #e4e4e4;
-    margin: 0px 0px 5px 0px;
+    border-bottom: 2px dotted #888888;
+    margin: 10px 0px 10px 0px;
 
 }
 .news-content{
