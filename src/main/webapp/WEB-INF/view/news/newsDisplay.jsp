@@ -18,7 +18,7 @@
     <div class="pageContent container">
         <div class="pageLeft collapse navbar-collapse col-md-3">
             <ul class="nav nav-pills nav-stacked" role="tablist">
-                 <li role="presentation" class="active"><a href="javascript:void(0);">企业新闻</a></li>
+                 <li role="presentation" class="active"><a href="news">企业新闻</a></li>
             </ul>
         </div>
         <div class="pageRight col-md-9 newsContext">
