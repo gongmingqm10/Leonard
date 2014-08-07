@@ -105,6 +105,28 @@ body {
 .mapBox li button.point.p10{top: 130px;left: 150px;}
 .mapBox li button.point.p11{top: 140px;left:512px;}
 .mapBox li button.point.p12{top: 418px;left:396px;}
+.mapBox li button.point.p13{top: 160px;left:475px;}
+.mapBox li button.point.p14{top: 295px;left:370px;}
+.mapBox li button.point.p15{top: 200px;left:410px;}
+.mapBox li button.point.p16{top: 150px;left:375px;}
+.mapBox li button.point.p17{top: 50px;left:540px;}
+.mapBox li button.point.p18{top: 240px;left:480px;}
+.mapBox li button.point.p19{top: 300px;left:510px;}
+.mapBox li button.point.p20{top: 270px;left:470px;}
+.mapBox li button.point.p21{top: 340px;left:480px;}
+.mapBox li button.point.p22{top: 210px;left:470px;}
+.mapBox li button.point.p23{top: 250px;left:425px;}
+.mapBox li button.point.p24{top: 280px;left:420px;}
+.mapBox li button.point.p25{top: 320px;left:410px;}
+.mapBox li button.point.p26{top: 370px;left:380px;}
+.mapBox li button.point.p27{top: 335px;left:360px;}
+.mapBox li button.point.p28{top: 260px;left:170px;}
+.mapBox li button.point.p29{top: 185px;left:300px;}
+.mapBox li button.point.p30{top: 220px;left:255px;}
+.mapBox li button.point.p31{top: 195px;left:350px;}
+.mapBox li button.point.p32{top: 370px;left:460px;}
+.mapBox li button.point.p33{top: 385px;left:425px;}
+.mapBox li button.point.p34{top: 360px;left:520px;}
 
 #dealer-table tr td.name{
     width:32%;

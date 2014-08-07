@@ -167,6 +167,292 @@
                         ">
                         海南
                     </button>
+                    <button type="button" class="btn point p13" data-toggle="popover"
+                        data-trigger="hover" data-placement="left" data-html="true"
+                        title="<h3>天津</h3>" data-content="
+                            <c:forEach var="dealer" items="${dealers}" varStatus="row">
+                                <c:if test= "${dealer.province == '天津'}" >
+                                ${dealer.dealerName}
+                                <br>联系人:${dealer.salerName}
+                                <br>联系电话：${dealer.phone}<br>
+                                </c:if>
+                                </c:forEach>
+                        ">
+                        天津
+                    </button>
+                    <button type="button" class="btn point p14" data-toggle="popover"
+                        data-trigger="hover" data-placement="left" data-html="true"
+                        title="<h3>重庆</h3>" data-content="
+                            <c:forEach var="dealer" items="${dealers}" varStatus="row">
+                                <c:if test= "${dealer.province == '重庆'}" >
+                                ${dealer.dealerName}
+                                <br>联系人:${dealer.salerName}
+                                <br>联系电话：${dealer.phone}<br>
+                                </c:if>
+                                </c:forEach>
+                        ">
+                        重庆
+                    </button>
+                    <button type="button" class="btn point p15" data-toggle="popover"
+                        data-trigger="hover" data-placement="left" data-html="true"
+                        title="<h3>山西</h3>" data-content="
+                            <c:forEach var="dealer" items="${dealers}" varStatus="row">
+                                <c:if test= "${dealer.province == '山西'}" >
+                                ${dealer.dealerName}
+                                <br>联系人:${dealer.salerName}
+                                <br>联系电话：${dealer.phone}<br>
+                                </c:if>
+                                </c:forEach>
+                        ">
+                        山西
+                    </button>
+                    <button type="button" class="btn point p16" data-toggle="popover"
+                        data-trigger="hover" data-placement="left" data-html="true"
+                        title="<h3>内蒙古</h3>" data-content="
+                            <c:forEach var="dealer" items="${dealers}" varStatus="row">
+                                <c:if test= "${dealer.province == '内蒙古'}" >
+                                ${dealer.dealerName}
+                                <br>联系人:${dealer.salerName}
+                                <br>联系电话：${dealer.phone}<br>
+                                </c:if>
+                                </c:forEach>
+                        ">
+                        内蒙古
+                    </button>
+                    <button type="button" class="btn point p17" data-toggle="popover"
+                        data-trigger="hover" data-placement="left" data-html="true"
+                        title="<h3>黑龙江</h3>" data-content="
+                            <c:forEach var="dealer" items="${dealers}" varStatus="row">
+                                <c:if test= "${dealer.province == '黑龙江'}" >
+                                ${dealer.dealerName}
+                                <br>联系人:${dealer.salerName}
+                                <br>联系电话：${dealer.phone}<br>
+                                </c:if>
+                                </c:forEach>
+                        ">
+                        黑龙江
+                    </button>
+                    <button type="button" class="btn point p18" data-toggle="popover"
+                        data-trigger="hover" data-placement="left" data-html="true"
+                        title="<h3>江苏</h3>" data-content="
+                            <c:forEach var="dealer" items="${dealers}" varStatus="row">
+                                <c:if test= "${dealer.province == '江苏'}" >
+                                ${dealer.dealerName}
+                                <br>联系人:${dealer.salerName}
+                                <br>联系电话：${dealer.phone}<br>
+                                </c:if>
+                                </c:forEach>
+                        ">
+                        江苏
+                    </button>
+                    <button type="button" class="btn point p19" data-toggle="popover"
+                        data-trigger="hover" data-placement="left" data-html="true"
+                        title="<h3>浙江</h3>" data-content="
+                            <c:forEach var="dealer" items="${dealers}" varStatus="row">
+                                <c:if test= "${dealer.province == '浙江'}" >
+                                ${dealer.dealerName}
+                                <br>联系人:${dealer.salerName}
+                                <br>联系电话：${dealer.phone}<br>
+                                </c:if>
+                                </c:forEach>
+                        ">
+                        浙江
+                    </button>
+                    <button type="button" class="btn point p20" data-toggle="popover"
+                        data-trigger="hover" data-placement="left" data-html="true"
+                        title="<h3>安徽</h3>" data-content="
+                            <c:forEach var="dealer" items="${dealers}" varStatus="row">
+                                <c:if test= "${dealer.province == '安徽'}" >
+                                ${dealer.dealerName}
+                                <br>联系人:${dealer.salerName}
+                                <br>联系电话：${dealer.phone}<br>
+                                </c:if>
+                                </c:forEach>
+                        ">
+                        安徽
+                    </button>
+                    <button type="button" class="btn point p21" data-toggle="popover"
+                        data-trigger="hover" data-placement="left" data-html="true"
+                        title="<h3>福建</h3>" data-content="
+                            <c:forEach var="dealer" items="${dealers}" varStatus="row">
+                                <c:if test= "${dealer.province == '福建'}" >
+                                ${dealer.dealerName}
+                                <br>联系人:${dealer.salerName}
+                                <br>联系电话：${dealer.phone}<br>
+                                </c:if>
+                                </c:forEach>
+                        ">
+                        福建
+                    </button>
+                    <button type="button" class="btn point p22" data-toggle="popover"
+                        data-trigger="hover" data-placement="left" data-html="true"
+                        title="<h3>山东</h3>" data-content="
+                            <c:forEach var="dealer" items="${dealers}" varStatus="row">
+                                <c:if test= "${dealer.province == '山东'}" >
+                                ${dealer.dealerName}
+                                <br>联系人:${dealer.salerName}
+                                <br>联系电话：${dealer.phone}<br>
+                                </c:if>
+                                </c:forEach>
+                        ">
+                        山东
+                    </button>
+                    <button type="button" class="btn point p23" data-toggle="popover"
+                        data-trigger="hover" data-placement="left" data-html="true"
+                        title="<h3>河南</h3>" data-content="
+                            <c:forEach var="dealer" items="${dealers}" varStatus="row">
+                                <c:if test= "${dealer.province == '河南'}" >
+                                ${dealer.dealerName}
+                                <br>联系人:${dealer.salerName}
+                                <br>联系电话：${dealer.phone}<br>
+                                </c:if>
+                                </c:forEach>
+                        ">
+                        河南
+                    </button>
+                    <button type="button" class="btn point p24" data-toggle="popover"
+                        data-trigger="hover" data-placement="left" data-html="true"
+                        title="<h3>湖北</h3>" data-content="
+                            <c:forEach var="dealer" items="${dealers}" varStatus="row">
+                                <c:if test= "${dealer.province == '湖北'}" >
+                                ${dealer.dealerName}
+                                <br>联系人:${dealer.salerName}
+                                <br>联系电话：${dealer.phone}<br>
+                                </c:if>
+                                </c:forEach>
+                        ">
+                        湖北
+                    </button>
+                    <button type="button" class="btn point p25" data-toggle="popover"
+                        data-trigger="hover" data-placement="left" data-html="true"
+                        title="<h3>湖南</h3>" data-content="
+                            <c:forEach var="dealer" items="${dealers}" varStatus="row">
+                                <c:if test= "${dealer.province == '湖南'}" >
+                                ${dealer.dealerName}
+                                <br>联系人:${dealer.salerName}
+                                <br>联系电话：${dealer.phone}<br>
+                                </c:if>
+                                </c:forEach>
+                        ">
+                        湖南
+                    </button>
+                    <button type="button" class="btn point p26" data-toggle="popover"
+                        data-trigger="hover" data-placement="left" data-html="true"
+                        title="<h3>广西</h3>" data-content="
+                            <c:forEach var="dealer" items="${dealers}" varStatus="row">
+                                <c:if test= "${dealer.province == '广西'}" >
+                                ${dealer.dealerName}
+                                <br>联系人:${dealer.salerName}
+                                <br>联系电话：${dealer.phone}<br>
+                                </c:if>
+                                </c:forEach>
+                        ">
+                        广西
+                    </button>
+                    <button type="button" class="btn point p27" data-toggle="popover"
+                        data-trigger="hover" data-placement="left" data-html="true"
+                        title="<h3>贵州</h3>" data-content="
+                            <c:forEach var="dealer" items="${dealers}" varStatus="row">
+                                <c:if test= "${dealer.province == '贵州'}" >
+                                ${dealer.dealerName}
+                                <br>联系人:${dealer.salerName}
+                                <br>联系电话：${dealer.phone}<br>
+                                </c:if>
+                                </c:forEach>
+                        ">
+                        贵州
+                    </button>
+                    <button type="button" class="btn point p28" data-toggle="popover"
+                        data-trigger="hover" data-placement="left" data-html="true"
+                        title="<h3>西藏</h3>" data-content="
+                            <c:forEach var="dealer" items="${dealers}" varStatus="row">
+                                <c:if test= "${dealer.province == '西藏'}" >
+                                ${dealer.dealerName}
+                                <br>联系人:${dealer.salerName}
+                                <br>联系电话：${dealer.phone}<br>
+                                </c:if>
+                                </c:forEach>
+                        ">
+                        西藏
+                    </button>
+                    <button type="button" class="btn point p29" data-toggle="popover"
+                        data-trigger="hover" data-placement="left" data-html="true"
+                        title="<h3>甘肃</h3>" data-content="
+                            <c:forEach var="dealer" items="${dealers}" varStatus="row">
+                                <c:if test= "${dealer.province == '甘肃'}" >
+                                ${dealer.dealerName}
+                                <br>联系人:${dealer.salerName}
+                                <br>联系电话：${dealer.phone}<br>
+                                </c:if>
+                                </c:forEach>
+                        ">
+                        甘肃
+                    </button>
+                    <button type="button" class="btn point p30" data-toggle="popover"
+                        data-trigger="hover" data-placement="left" data-html="true"
+                        title="<h3>青海</h3>" data-content="
+                            <c:forEach var="dealer" items="${dealers}" varStatus="row">
+                                <c:if test= "${dealer.province == '青海'}" >
+                                ${dealer.dealerName}
+                                <br>联系人:${dealer.salerName}
+                                <br>联系电话：${dealer.phone}<br>
+                                </c:if>
+                                </c:forEach>
+                        ">
+                        青海
+                    </button>
+                    <button type="button" class="btn point p31" data-toggle="popover"
+                        data-trigger="hover" data-placement="left" data-html="true"
+                        title="<h3>宁夏</h3>" data-content="
+                            <c:forEach var="dealer" items="${dealers}" varStatus="row">
+                                <c:if test= "${dealer.province == '宁夏'}" >
+                                ${dealer.dealerName}
+                                <br>联系人:${dealer.salerName}
+                                <br>联系电话：${dealer.phone}<br>
+                                </c:if>
+                                </c:forEach>
+                        ">
+                        宁夏
+                    </button>
+                    <button type="button" class="btn point p32" data-toggle="popover"
+                        data-trigger="hover" data-placement="left" data-html="true"
+                        title="<h3>香港</h3>" data-content="
+                            <c:forEach var="dealer" items="${dealers}" varStatus="row">
+                                <c:if test= "${dealer.province == '香港'}" >
+                                ${dealer.dealerName}
+                                <br>联系人:${dealer.salerName}
+                                <br>联系电话：${dealer.phone}<br>
+                                </c:if>
+                                </c:forEach>
+                        ">
+                        香港
+                    </button>
+                    <button type="button" class="btn point p33" data-toggle="popover"
+                        data-trigger="hover" data-placement="left" data-html="true"
+                        title="<h3>澳门</h3>" data-content="
+                            <c:forEach var="dealer" items="${dealers}" varStatus="row">
+                                <c:if test= "${dealer.province == '澳门'}" >
+                                ${dealer.dealerName}
+                                <br>联系人:${dealer.salerName}
+                                <br>联系电话：${dealer.phone}<br>
+                                </c:if>
+                                </c:forEach>
+                        ">
+                        澳门
+                    </button>
+                    <button type="button" class="btn point p34" data-toggle="popover"
+                        data-trigger="hover" data-placement="left" data-html="true"
+                        title="<h3>台湾</h3>" data-content="
+                            <c:forEach var="dealer" items="${dealers}" varStatus="row">
+                                <c:if test= "${dealer.province == '台湾'}" >
+                                ${dealer.dealerName}
+                                <br>联系人:${dealer.salerName}
+                                <br>联系电话：${dealer.phone}<br>
+                                </c:if>
+                                </c:forEach>
+                        ">
+                        台湾
+                    </button>
                 </li>
                 </ul>
             </div>
@@ -188,7 +474,6 @@
                         <option>浙江</option>
                         <option>安徽</option>
                         <option>福建</option>
-                        <option>山西</option>
                         <option>山东</option>
                         <option>河南</option>
                         <option>湖北</option>
