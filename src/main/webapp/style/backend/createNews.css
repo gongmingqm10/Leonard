@@ -16,6 +16,7 @@
 	overflow: scroll;
 	outline: none;
 	margin-bottom:10px;
+	max-width:697px;
 }
 #voiceBtn {
   width: 20px;

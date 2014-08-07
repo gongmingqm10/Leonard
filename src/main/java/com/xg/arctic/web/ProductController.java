@@ -1,6 +1,8 @@
 package com.xg.arctic.web;
 
 import com.xg.arctic.model.Product;
+import com.xg.arctic.model.ProductRE;
+import com.xg.arctic.service.impl.ProductREServiceImpl;
 import com.xg.arctic.service.impl.ProductServiceImpl;
 import com.xg.arctic.util.MyBatisUtil;
 import org.apache.commons.fileupload.FileUpload;
@@ -22,6 +24,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.*;
+import java.text.SimpleDateFormat;
 
 /**
  * User: gongming
@@ -34,9 +37,11 @@ import java.util.*;
 public class ProductController {
 
     private ProductServiceImpl productService;
+    private ProductREServiceImpl productREService;
 
     public ProductController() {
         this.productService =new ProductServiceImpl(MyBatisUtil.getSqlSessionFactory());
+        this.productREService =new ProductREServiceImpl(MyBatisUtil.getSqlSessionFactory());
     }
 
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
@@ -47,10 +52,12 @@ public class ProductController {
 
         String productName=request.getParameter("productName");
         String id=request.getParameter("id");
-        String fileName =serverRealPath+ "/uploads/productPic/" + productName+"-"+id + ".jpg";
+        Calendar cal = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("HH-mm-ss");
+        String fileName =serverRealPath+ "/uploads/productPic/" + productName + sdf.format(cal.getTime()) +"-"+id + ".jpg";
         String[]  data=new String[2];
         data[0] = id;
-        data[1] = "uploads/productPic/" + productName+"-"+id + ".jpg";
+        data[1] = "uploads/productPic/" + productName+ sdf.format(cal.getTime()) +"-"+id + ".jpg";
 
         //1. get the files from the request object
         Iterator<String> itr =  request.getFileNames();
@@ -67,6 +74,37 @@ public class ProductController {
 
         return data;
 }
+
+    @RequestMapping(value = "/uploadView", method = RequestMethod.POST)
+    public @ResponseBody String[] uploadViewPic(MultipartHttpServletRequest request, ModelMap map){
+        HttpSession session = request.getSession();
+        ServletContext application  = session.getServletContext();
+        String serverRealPath = application.getRealPath("/") ;
+
+        String productName=request.getParameter("productName");
+        String id=request.getParameter("id");
+        Calendar cal = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("HH-mm-ss");
+        String fileName =serverRealPath+ "/uploads/productView/"  +productName + sdf.format(cal.getTime()) +"-view"+id + ".jpg";
+        String[]  data=new String[2];
+        data[0] = id;
+        data[1] = "uploads/productView/"  +productName + sdf.format(cal.getTime()) +"-view"+id + ".jpg";
+
+        //1. get the files from the request object
+        Iterator<String> itr =  request.getFileNames();
+        MultipartFile mpf = request.getFile(itr.next());
+        File copy = new File (fileName);
+        try {
+            BufferedOutputStream stream =
+                    new BufferedOutputStream(new FileOutputStream(copy));
+            IOUtils.write(mpf.getBytes(), stream);
+            stream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return data;
+    }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public ModelAndView loadNewsCreatePage(ModelMap map,HttpServletRequest request) {
@@ -114,6 +152,27 @@ public class ProductController {
         productService.updateDescribeById(id,describe);
         return new ModelAndView("redirect:/admin/productNews", map);
     }
+    @RequestMapping(value = "/updateFeature", method = RequestMethod.POST)
+    public ModelAndView updateProductFeature(ModelMap map,HttpServletRequest request) {
+        long id=Integer.parseInt(request.getParameter("id"));
+        String feature=request.getParameter("content");
+        productREService.updateFeatureById(id, feature);
+        return new ModelAndView("redirect:/admin/productFeature", map);
+    }
+    @RequestMapping(value = "/updateParam", method = RequestMethod.POST)
+    public ModelAndView updateProductParam(ModelMap map,HttpServletRequest request) {
+        long id=Integer.parseInt(request.getParameter("id"));
+        String param=request.getParameter("content");
+        productREService.updateParamById(id, param);
+        return new ModelAndView("redirect:/admin/productParam", map);
+    }
+    @RequestMapping(value = "/updateView", method = RequestMethod.POST)
+    public ModelAndView updateProductPView(ModelMap map,HttpServletRequest request) {
+        long id=Integer.parseInt(request.getParameter("id"));
+        String url=request.getParameter("url");
+        productREService.updateViewById(id, url);
+        return new ModelAndView("redirect:/admin/productView", map);
+    }
 
     @RequestMapping(value = "/product/{productType}", method = RequestMethod.GET)
     public ModelAndView loadProductPage(@PathVariable("productType") String type, ModelMap map,HttpServletRequest request) {
@@ -139,4 +198,48 @@ public class ProductController {
         map.put("product",product);
         return new ModelAndView("product/productNews", map);
     }
+
+    @RequestMapping(value = "/productNews", method = RequestMethod.POST)
+    public @ResponseBody String[] getProductNewsData(ModelMap map,HttpServletRequest request) {
+        long id=Integer.parseInt(request.getParameter("id"));
+        Product product = productService.findProductById(id);
+        ProductRE productRE=productREService.findProductREByProductId(id);
+        String[] views=productRE.getProductView().split("\\,");
+        String viewStr="                  <div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\n" +
+                "                    <!-- Indicators -->\n" +
+                "                    <ol class=\"carousel-indicators\">\n" +
+                "                      <li data-target=\"#carousel-example-generic\" data-slide-to=\"0\" class=\"active\"></li>\n" +
+                "                      <li data-target=\"#carousel-example-generic\" data-slide-to=\"1\"></li>\n" +
+                "                      <li data-target=\"#carousel-example-generic\" data-slide-to=\"2\"></li>\n" +
+                "                      <li data-target=\"#carousel-example-generic\" data-slide-to=\"3\"></li>\n" +
+                "                      <li data-target=\"#carousel-example-generic\" data-slide-to=\"4\"></li>\n" +
+                "                    </ol>\n" +
+                "                    <!-- Wrapper for slides -->\n" +
+                "                    <div class=\"carousel-inner\" role=\"listbox\">\n";
+        for(int i=0;i<views.length;i++){
+            if(i==0) viewStr+="                      <div class=\"item active\">\n";
+            else viewStr+="                      <div class=\"item\">\n";
+            viewStr+="                        <img src=\""+ views[i]+"\" alt=\"...\">\n" +
+                    "                        <div class=\"carousel-caption\">\n" +
+                    "                        </div>\n" +
+                    "                      </div>\n" ;
+        }
+        viewStr+="                    </div>\n" +
+                "                    <!-- Controls -->\n" +
+                "                    <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\n" +
+                "                      <span class=\"glyphicon glyphicon-chevron-left\"></span>\n" +
+                "                      <span class=\"sr-only\">Previous</span>\n" +
+                "                    </a>\n" +
+                "                    <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\n" +
+                "                      <span class=\"glyphicon glyphicon-chevron-right\"></span>\n" +
+                "                      <span class=\"sr-only\">Next</span>\n" +
+                "                    </a>\n" +
+                "                  </div>";
+        String[] str=new String[4];
+        str[1]=viewStr;
+        str[2]=productRE.getProductFeature();
+        str[3]=productRE.getProductParam();
+        return str;
+    }
+
 }

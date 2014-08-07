@@ -22,6 +22,7 @@
                 <c:if test ="${product.subType == subType}">
                 <a href="product/productNews/${product.id}">
                     <div class="col-md-4 text-center product-box">
+
                         <img class="product-img" src="${fn:split(product.images, ',')[0]}" alt="">
                         <h4>${product.productName}</h4>
                         <h5>${product.productInfo}</h5>

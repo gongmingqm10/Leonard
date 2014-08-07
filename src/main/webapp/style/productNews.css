@@ -24,3 +24,6 @@
     background-position: left top;
     border: 2px solid #F00 !important;
 }
+#product-img{
+    max-height: 300px;
+}

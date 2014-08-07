@@ -39,13 +39,11 @@ $(function(){
 
 function saveProduct(id){
     var contentText= $('#editor').cleanHtml();
-    if (id==null) id=-1;
-    console.log(id);
     var r=confirm("是否确定添加?");
     if (r==true)
     {
         var form = document.createElement("form");
-        form.setAttribute("action", "product/updateNews")
+        form.setAttribute("action", "product/updateFeature")
         form.setAttribute("method", "POST");
 
         var hiddenField = document.createElement("input");

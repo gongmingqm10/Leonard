@@ -25,7 +25,6 @@
                   <div class="media-body">
                     <span>${news.date}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                     <a href="news/newsDisplay/${news.id}"><span class="media-heading">${news.title}</span></a>
-
                   </div>
               </c:forEach>
             </div>

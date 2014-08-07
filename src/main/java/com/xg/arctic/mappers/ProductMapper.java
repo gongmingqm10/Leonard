@@ -55,4 +55,10 @@ public interface ProductMapper {
                     " WHERE type=#{type}"
     )
     List<Product> findProductsByType(String type);
+
+    @Select(
+            "SELECT id FROM product" +
+                    " WHERE productName=#{productName}"
+    )
+    List<Product> findProductsByName(String productName);
 }

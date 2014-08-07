@@ -12,11 +12,11 @@
 <script src="scripts/jquery.hotkeys.js"></script>
 <script src="scripts/prettify.js"></script>
 <script src="bootstrap/js/bootstrap-wysiwyg.js"></script>
-<script src="scripts/backend/editProductNews.js"></script>
+<script src="scripts/backend/editProductParam.js"></script>
 
 <div class="panel panel-default">
     <div class="panel-heading">
-    <p class="panel-title">产品新闻管理</p>
+    <p class="panel-title">产品参数管理</p>
     </div>
     <div class="panel-body">
         <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
@@ -72,12 +72,11 @@
         </div>
 
         <div id="editor">
-          <c:set var="url" value="${product.images}" />
-          <div><p id="product-title-p">${product.productName}</p></div><div style="text-align: center;"><img id="product-img" src="${fn:split(url, ',')[0]}" style="color: inherit;"></div>
+            ${productRE.productParam}
         </div>
 
-        <button class="btn btn-primary " onClick="saveProduct(${product.id})">保存</button>
-        <a href="admin/productNews"><button class="btn btn-primary " >返回</button></a>
+        <button class="btn btn-primary " onClick="saveProduct(${productRE.id})">保存</button>
+        <a href="admin/productParam"><button class="btn btn-primary " >返回</button></a>
     </div>
 </div>
 

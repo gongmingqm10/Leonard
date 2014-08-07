@@ -24,7 +24,7 @@
         <div class="pageRight col-md-9 newsContext">
              <div class="title">
                 <h3>${news.title} </h3>
-                 <span style=" float:none; padding-right:10px">发布人：CFMOTO春风动力</span>
+                 <span style=" float:none; padding-right:10px">发布人：新闻管理员</span>
                  时间：${news.date}&nbsp;&nbsp;&nbsp;浏览次数：237
              </div>
              ${news.content}

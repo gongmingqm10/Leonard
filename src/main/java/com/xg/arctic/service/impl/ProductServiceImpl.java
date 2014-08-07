@@ -1,6 +1,7 @@
 package com.xg.arctic.service.impl;
 
 import com.xg.arctic.mappers.ProductMapper;
+import com.xg.arctic.mappers.ProductREMapper;
 import com.xg.arctic.model.Product;
 import com.xg.arctic.service.ProductService;
 import org.apache.ibatis.session.SqlSession;
@@ -28,7 +29,11 @@ public class ProductServiceImpl implements ProductService{
         SqlSession session = factory.openSession();
         try {
             ProductMapper productMapper = session.getMapper(ProductMapper.class);
+            ProductREMapper productREMapper = session.getMapper(ProductREMapper.class);
             productMapper.addProduct(number, productName, type, subType, productInfo, colors, colorName, url);
+            session.commit();
+            Product product=productMapper.findProductsByName(productName).get(0);
+            productREMapper.addProductRE(product.getId(), productName);
             session.commit();
         } finally {
 
@@ -52,9 +57,14 @@ public class ProductServiceImpl implements ProductService{
     public void deleteProductById(long id) {
         SqlSession session = factory.openSession();
         try{
+            ProductREMapper productREMapper = session.getMapper(ProductREMapper.class);
             ProductMapper productMapper = session.getMapper(ProductMapper.class);
+
+            productREMapper.deleteProductREByProductId(id);
+            session.commit();
             productMapper.deleteProductById(id);
             session.commit();
+
         } finally {
             session.close();
         }
@@ -104,6 +114,19 @@ public class ProductServiceImpl implements ProductService{
         try{
             ProductMapper productMapper = session.getMapper(ProductMapper.class);
             products = productMapper.findProductsByType(type);
+        } finally {
+            session.close();
+        }
+        return products;
+    }
+
+    @Override
+    public List<Product> findProductByName(String productName) {
+        List<Product> products = new ArrayList<Product>();
+        SqlSession session = factory.openSession();
+        try{
+            ProductMapper productMapper = session.getMapper(ProductMapper.class);
+            products = productMapper.findProductsByName(productName);
         } finally {
             session.close();
         }
