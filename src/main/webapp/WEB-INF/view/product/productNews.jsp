@@ -18,15 +18,29 @@
          </div>
     </div>
     <div class="pageContent container">
-        <div class="pageLeft collapse navbar-collapse col-md-3 border">
-            <ul class="nav nav-pills nav-stacked" role="tablist">
-                <li role="presentation" class="active"><a href="product/productNews/${product.id}">车型展示</a></li>
-                <li role="presentation" ><a href="javascript:void(0);" onclick="switchItem(this,1,${product.id})">视觉体验</a></li>
-                <li role="presentation" ><a href="javascript:void(0);" onclick="switchItem(this,2,${product.id})">车型亮点</a></li>
-                <li role="presentation" ><a href="javascript:void(0);" onclick="switchItem(this,3,${product.id})">技术参数</a></li>
-            </ul>
+        <div class="col-md-12 anchor-nav-container clear-fix">
+        		<ul class="anchor-nav">
+        		    <a href="product/productNews/${product.id}">
+                    <li class="far-left" onclick="">
+                    	<span class="icon traction"></span>
+                    	<span class="din">Traction</span>
+                    </li>
+                    </a>
+                    <li class="middle-left" onclick="switchItem(this,1,${product.id})">
+                    	<span class="icon power"></span>
+                    	<span class="din">Power</span>
+                    </li>
+                    <li class="middle-right" onclick="switchItem(this,2,${product.id})">
+                    	<span class="icon ride-tech"></span>
+                    	<span class="din">Ride Tech</span>
+                    </li>
+                    <li class="far-right last" onclick="switchItem(this,3,${product.id})">
+                    	<span class="icon versatility"></span>
+                    	<span class="din">Versatility</span>
+                    </li>
+                </ul>
         </div>
-        <div class="pageRight col-md-9 newsContext">
+        <div class="pageRight col-md-12 newsContext">
              <div class="title">
                 <h3>${product.productName} </h3>
                  <span >发布人：新闻管理员</span>

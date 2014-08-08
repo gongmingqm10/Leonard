@@ -63,11 +63,11 @@ public class DealerServiceImpl implements DealerService{
     }
 
     @Override
-    public void updateDealerById(long id, String dealer, String type, String saler, String phone, String address) {
+    public void updateDealerById(long id, String dealer, String type, String saler, String phone, String address, String province) {
         SqlSession session = factory.openSession();
         try {
             DealerMapper dealerMapper = session.getMapper(DealerMapper.class);
-            dealerMapper.updateDealerById(id, dealer, type, saler, phone, address);
+            dealerMapper.updateDealerById(id, dealer, type, saler, phone, address,province);
             session.commit();
         } finally {
 

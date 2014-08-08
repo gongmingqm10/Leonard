@@ -27,3 +27,89 @@
 #product-img{
     max-height: 300px;
 }
+
+ .traction {
+     background: url('../images/product/icon-traction.png');
+ }
+ .ride-tech {
+     background-image: url('../images/product/icon-ridetech.png');
+ }
+ .versatility {
+    background-image: url('../images/product/icon-versatility.png');
+ }
+ .power {
+    background-image: url('../images/product/icon-power.png');
+ }
+ .icon {
+
+     height: 51px;
+     position: absolute;
+     right: 10px;
+     top: 10px;
+     width: 66px;
+     z-index: 2;
+ }
+ .din {
+     font-family: "DIN";
+ }
+ .anchor-nav li span.icon {
+     background-position: center;
+     background-repeat: no-repeat;
+     display: block;
+     height: 62px;
+     margin: 0;
+     padding: 0;
+     position: absolute;
+     top: 17px;
+     width: 100%;
+ }
+ .anchor-nav li span {
+     right: 0;
+ }
+ .anchor-nav li.far-left {
+     border-left: 0;
+     width: 235px;
+ }
+ .anchor-nav li.far-right {
+     border-right: 0;
+     width: 233px;
+ }
+ .anchor-nav li {
+     color: #333;
+     cursor: pointer;
+     float: left;
+     font-size: 1.1em;
+     height: 121px;
+     line-height: 194px;
+     position: relative;
+     text-align: center;
+     text-transform: uppercase;
+     width: 233px;
+     background-color: transparent;
+     border-left: 1px solid rgba(255,255,255,0.4);
+     border-right: 1px solid rgba(0,0,0,0.2);
+     transition: background-color 300ms;
+     display: list-item;
+ }
+ .anchor-nav {
+     height: 121px;
+     list-style: none;
+     margin: 0;
+     padding: 0;
+     width: 100%;
+ }
+ .clear-fix:after {
+     clear: both;
+     content: '.';
+     display: block;
+     height: 0;
+     visibility: hidden;
+ }
+ .anchor-nav-container {
+     background: rgba(0,0,0,0.05);
+     border-radius: 8px;
+     box-shadow: inset 0 0 8px rgba(0,0,0,0.4);
+     height: 121px;
+     overflow: hidden;
+     width: 970px;
+ }

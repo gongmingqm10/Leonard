@@ -36,10 +36,10 @@ public interface DealerMapper {
     @Update(
             "UPDATE dealer " +
                     "SET dealerName=#{param2}, type=#{param3}, salerName=#{param4}," +
-                    " phone=#{param5}, address=#{param6}" +
+                    " phone=#{param5}, address=#{param6}, province=#{param7}" +
                     " WHERE id=#{param1}"
     )
-    void updateDealerById(long id, String dealer, String type, String saler, String phone, String address);
+    void updateDealerById(long id, String dealer, String type, String saler, String phone, String address, String province);
 
     @Insert(
             "INSERT INTO dealer(dealerName, type, salerName, phone, address, province) " +

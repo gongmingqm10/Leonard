@@ -77,6 +77,11 @@
 
         <button class="btn btn-primary " onClick="saveProduct(${productRE.id})">保存</button>
         <a href="admin/productParam"><button class="btn btn-primary " >返回</button></a>
+
+        <div >
+            <textarea id="html-editor" name="Text1" cols="40" rows="10" ></textarea>
+            <button class="btn btn-primary " onClick="saveHtml()">确定</button>
+        </div>
     </div>
 </div>
 

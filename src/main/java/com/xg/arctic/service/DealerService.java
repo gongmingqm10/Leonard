@@ -17,7 +17,7 @@ public interface DealerService {
 
     void deleteDealerById(long id);
 
-    void updateDealerById(long id, String dealer, String type, String saler, String phone, String address);
+    void updateDealerById(long id, String dealer, String type, String saler, String phone, String address, String province);
 
     public void addDealer(String dealer, String type, String saler, String phone, String address, String province);
 

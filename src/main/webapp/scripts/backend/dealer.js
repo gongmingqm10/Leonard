@@ -100,6 +100,12 @@ function updateItem(id, element){
             hiddenDealer.setAttribute("type", "hidden");
             form.appendChild(hiddenDealer);
 
+             var hiddenDealer = document.createElement("input");
+             hiddenDealer.setAttribute("name", "province");
+             hiddenDealer.setAttribute("value", $(children[5]).text());
+             hiddenDealer.setAttribute("type", "hidden");
+             form.appendChild(hiddenDealer);
+
             document.body.appendChild(form);
             form.submit();
         }

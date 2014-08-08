@@ -35,6 +35,10 @@ $(function(){
     initToolbarBootstrapBindings();
 	$('#editor').wysiwyg({ fileUploadError: showErrorAlert} );
     window.prettyPrint && prettyPrint();
+    $('#editor').bind("DOMSubtreeModified",function(){
+      document.getElementById("html-editor").innerHTML=  $('#editor').cleanHtml();
+    });
+    document.getElementById("html-editor").innerHTML=  $('#editor').cleanHtml();
 });
 
 function saveProduct(id){
@@ -61,4 +65,8 @@ function saveProduct(id){
         document.body.appendChild(form);
         form.submit();
     }
+}
+function saveHtml(){
+    var contentText=document.getElementById("html-editor").value;
+    document.getElementById("editor").innerHTML= contentText;
 }

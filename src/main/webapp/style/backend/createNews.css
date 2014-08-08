@@ -16,7 +16,7 @@
 	overflow: scroll;
 	outline: none;
 	margin-bottom:10px;
-	max-width:697px;
+	max-width:940px;
 }
 #voiceBtn {
   width: 20px;
@@ -48,4 +48,19 @@ div[data-role="editor-toolbar"] {
 }
 .hero-unit {
     padding: 40px 60px 60px 60px;
+}
+#html-editor{
+    background-color: white;
+    border-collapse: separate;
+    border: 1px solid rgb(204, 204, 204);
+    padding: 4px;
+    box-sizing: content-box;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+    border-radius: 4px;
+    width:940px;
+    margin-top:10px;
+}
+.btn-toolbar {
+    width:940px;
 }

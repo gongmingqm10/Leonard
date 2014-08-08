@@ -73,11 +73,19 @@
 
         <div id="editor">
           <c:set var="url" value="${product.images}" />
-          <div><p id="product-title-p">${product.productName}</p></div><div style="text-align: center;"><img id="product-img" src="${fn:split(url, ',')[0]}" style="color: inherit;"></div>
+          ${product.productNews}
+          <c:if test= "${empty product.productNews}" >
+            <div><p id="product-title-p">${product.productName}</p></div><div style="text-align: center;"><img id="product-img" src="${fn:split(url, ',')[0]}" style="color: inherit;"></div>
+          </c:if>
         </div>
 
         <button class="btn btn-primary " onClick="saveProduct(${product.id})">保存</button>
         <a href="admin/productNews"><button class="btn btn-primary " >返回</button></a>
+
+        <div >
+            <textarea id="html-editor" name="Text1" cols="40" rows="10" ></textarea>
+            <button class="btn btn-primary " onClick="saveHtml()">确定</button>
+        </div>
     </div>
 </div>
 

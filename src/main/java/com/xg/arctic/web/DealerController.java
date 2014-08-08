@@ -67,7 +67,8 @@ public class DealerController {
         String saler=request.getParameter("saler");
         String phone=request.getParameter("phone");
         String address=request.getParameter("address");
-        dealerService.updateDealerById(id,dealer,type,saler,phone,address);
+        String province=request.getParameter("province");
+        dealerService.updateDealerById(id,dealer,type,saler,phone,address,province);
 
         return new ModelAndView("redirect:/admin", map);
     }
