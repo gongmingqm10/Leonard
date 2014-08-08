@@ -68,11 +68,11 @@
  }
  .anchor-nav li.far-left {
      border-left: 0;
-     width: 235px;
+     width: 244px;
  }
  .anchor-nav li.far-right {
      border-right: 0;
-     width: 233px;
+     width: 244px;
  }
  .anchor-nav li {
      color: #333;
@@ -84,12 +84,15 @@
      position: relative;
      text-align: center;
      text-transform: uppercase;
-     width: 233px;
+     width: 240px;
      background-color: transparent;
      border-left: 1px solid rgba(255,255,255,0.4);
      border-right: 1px solid rgba(0,0,0,0.2);
      transition: background-color 300ms;
      display: list-item;
+ }
+ .anchor-nav li:hover{
+     background-color: #bbbbbb;
  }
  .anchor-nav {
      height: 121px;
@@ -112,4 +115,6 @@
      height: 121px;
      overflow: hidden;
      width: 970px;
+     padding-left:1px;
+     padding-right:0px;
  }

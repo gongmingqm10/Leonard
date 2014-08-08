@@ -23,20 +23,20 @@
         		    <a href="product/productNews/${product.id}">
                     <li class="far-left" onclick="">
                     	<span class="icon traction"></span>
-                    	<span class="din">Traction</span>
+                    	<span class="din">产品展示</span>
                     </li>
                     </a>
                     <li class="middle-left" onclick="switchItem(this,1,${product.id})">
                     	<span class="icon power"></span>
-                    	<span class="din">Power</span>
+                    	<span class="din">视觉效果</span>
                     </li>
                     <li class="middle-right" onclick="switchItem(this,2,${product.id})">
                     	<span class="icon ride-tech"></span>
-                    	<span class="din">Ride Tech</span>
+                    	<span class="din">产品特点</span>
                     </li>
                     <li class="far-right last" onclick="switchItem(this,3,${product.id})">
                     	<span class="icon versatility"></span>
-                    	<span class="din">Versatility</span>
+                    	<span class="din">产品参数</span>
                     </li>
                 </ul>
         </div>
