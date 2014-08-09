@@ -66,3 +66,14 @@ function uploads(i){
        complete: function() {console.log("upload complete");},
      });
 }
+
+jQuery(document).scroll(function(){
+if(jQuery(this).scrollTop() > 890){
+    jQuery('.sticky-nav-container').css('display','');
+    jQuery('.sticky-nav-container').css('position','fixed');
+    jQuery('.sticky-nav-container').css('top','0');
+    jQuery('.sticky-nav-container').css('z-index','100');
+}else{
+    jQuery('.sticky-nav-container').css('display','none');
+}
+});

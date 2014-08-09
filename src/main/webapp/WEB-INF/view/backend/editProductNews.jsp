@@ -75,7 +75,7 @@
           <c:set var="url" value="${product.images}" />
           ${product.productNews}
           <c:if test= "${empty product.productNews}" >
-            <div><p id="product-title-p">${product.productName}</p></div><div style="text-align: center;"><img id="product-img" src="${fn:split(url, ',')[0]}" style="color: inherit;"></div>
+            <div id="product-img-box" style="text-align: center;"><img id="product-img" src="${fn:split(url, ',')[0]}" style="color: inherit;"></div>
           </c:if>
         </div>
 

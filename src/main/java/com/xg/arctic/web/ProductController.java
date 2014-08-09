@@ -194,8 +194,10 @@ public class ProductController {
     public ModelAndView loadProductNewsPage(@PathVariable("productId") String productId, ModelMap map,HttpServletRequest request) {
         Product product=productService.findProductById(Integer.parseInt(productId));
         List<Product> products = productService.findAllProducts();
+        ProductRE productRE=productREService.findProductREByProductId(Integer.parseInt(productId));
         map.put("products",products);
         map.put("product",product);
+        map.put("productRE",productRE);
         return new ModelAndView("product/productNews", map);
     }
 

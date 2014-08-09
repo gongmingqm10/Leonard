@@ -1,3 +1,14 @@
+body {
+    background: white url(../images/product/background-light.jpg) repeat center center;
+}
+.lv_treeBox {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.head-btn span {
+    color: #111111;
+}
 .color-box ul{
     padding-left: 0px;
 }
@@ -24,10 +35,6 @@
     background-position: left top;
     border: 2px solid #F00 !important;
 }
-#product-img{
-    max-height: 300px;
-}
-
  .traction {
      background: url('../images/product/icon-traction.png');
  }
@@ -118,3 +125,106 @@
      padding-left:1px;
      padding-right:0px;
  }
+
+ .sticky-nav-container {
+     background: #fff url('../images/product/background-dark.jpg') repeat-x center center;
+     box-shadow: 0 0 8px rgba(0,0,0,0.5);
+     display: block;
+     height: 44px;
+     position: fixed;
+     top: -44px;
+     width: 100%;
+     z-index: 999;
+ }
+ .sticky-nav {
+     height: 44px;
+     margin: 0 auto;
+     position: relative;
+     top: 0;
+     width: 970px;
+ }
+ .sticky-nav .anchor-nav-container {
+     background: none;
+     border-left: 1px solid #999;
+     border-right: 1px solid #eee;
+     border-radius: 0;
+     box-shadow: none;
+     height: 44px;
+ }
+ sticky-nav .anchor-nav-container .anchor-nav li {
+     background-position: center center;
+     background-repeat: no-repeat;
+     height: 44px;
+     width: 233px;
+ }
+ .sticky-nav .anchor-nav-container .anchor-nav li span {
+     display: block;
+     font-size: 0.9em;
+     background-position: 78px 9px;
+     background-repeat: no-repeat;
+     width: auto;
+     text-align: center;
+     padding: 0 0 10px 35px;
+     line-height: 46px;
+ }
+ .model-top-ffe {
+     background: url('../images/product/snow-texture.png') no-repeat center -107px;
+     background-repeat: no-repeat;
+     height: 580px;
+     display: block;
+     margin: 0 auto;
+     position: relative;
+     width: 980px ;
+     margin-top:100px;
+ }
+.model-info {
+    height: 305px;
+    left: 18px;
+    position: absolute;
+    top: 35px;
+    width: 100%;
+}
+h1.model-name {
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 13px;
+    font-family: 'DIN';
+}
+.more-options {
+    position: absolute;
+    right: 19px;
+    top: 380px;
+    width: 449px;
+}
+.call-outs {
+    bottom: auto;
+    height: auto;
+    min-width: 500px;
+    position: absolute;
+    top: 44px;
+}
+.call-outs .inner-float {
+    float: right;
+    left: -70px;
+    position: relative;
+}
+.sticky-nav .anchor-nav-container .anchor-nav li span.features {
+    background-image: url('../images/product/icon-features-small.png');
+}
+.sticky-nav .anchor-nav-container .anchor-nav li span.spec {
+    background-image: url('../images/product/icon-specifications-small.png');
+    background-position: 55px 9px;
+}
+.sticky-nav .anchor-nav-container .anchor-nav li span.arcticwear {
+    background-image: url('../images/product/icon-arcticwear-small.png');
+    background-position: 62px 9px;
+}
+.sticky-nav .anchor-nav-container .anchor-nav li span.accessories {
+    background-image: url('../images/product/icon-accessories-small.png');
+    background-position: 62px 9px;
+}
+#product-img-box{
+    margin-top:-80px;
+}
