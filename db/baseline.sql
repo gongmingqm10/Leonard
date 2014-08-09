@@ -41,7 +41,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1, 'admin', '123456'), (2,'xuhuan','123456'), (3,'gongming','123456');
+INSERT INTO `user` VALUES (1, 'admin', '123456');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -85,3 +85,17 @@ CREATE TABLE `news` (
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `productre` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `productView` varchar(255) DEFAULT NULL,
+  `productParam` longtext,
+  `productFeature` longtext,
+  `productId` bigint(20) NOT NULL,
+  `productName` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `productId` (`productId`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
+
+ALTER TABLE `productre`
+  ADD CONSTRAINT `productre_ibfk_1` FOREIGN KEY (`productId`) REFERENCES `product` (`id`);
